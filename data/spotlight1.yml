@@ -1,10 +1,10 @@
 ####################### Spotlight #########################
 style: "style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
 id: "first"
-title : "Spotlight"
+title : "Scratchy cut film"
 content: |
-  This is a <strong>Spotlight</strong> element, and it's generally used &ndash; as its name implies &ndash; to spotlight a particular feature, subject, or pretty much whatever. You can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-spotlight">details</a>).
+  A few examples of the light around Vejer, or how it is captured on a baby Graphlex camera from the 1930s...
 button: 
-  label: "Learn More"
-  link: "#"
-image: "images/spotlight01.jpg"
+  label: "more"
+  link: "/posts/01_gallery"
+image: "images/01_gallery/01.jpg"

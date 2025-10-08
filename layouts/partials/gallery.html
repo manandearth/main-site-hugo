@@ -1,5 +1,5 @@
 <!-- Gallery -->
-<section class="wrapper style1 align-center" {{ with .id }} id="{{ . }}"{{ end }}>
+<section id="{{ .id | default .File.BaseFileName }}" class="wrapper style2">
     <div class="inner">
         <h2>{{ .title }}</h2>
         <p>{{ .content | safeHTML }}</p>
