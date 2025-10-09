@@ -5,7 +5,6 @@ style: "style2 medium lightbox onscroll-fade-in"
 date: 2025-10-09
 draft: false
 issue: "003"
-layout: "gallery"
 content: |
 inlineImage: "images/issue_003/01.jpg"
 images:

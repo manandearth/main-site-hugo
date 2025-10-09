@@ -1,7 +1,17 @@
 {{ define "main" }}
-{{ partial "header.html" . }}
-  {{ partial "gallery-post.html" . }}
+
+  {{ partial "header.html" . }}
+  {{ $tags := .Params.tags }}
+  {{ if in $tags "penart" }}
+    {{ partial "penart-post.html" . }}
+  {{ else if in $tags "words" }}
+    {{ partial "words-post.html" . }}
+  {{ else if in $tags "photography"}}
+    {{ partial "gallery-post.html" . }}
+  {{ else }}
+    {{ partial "default-post.html" . }}
+  {{ end }}
 <link rel="stylesheet" href="{{ "css/posts.css" | relURL }}">
 <link rel="stylesheet" href="{{ "css/header.css" | relURL }}">
-{{ partial "footer" . }}
-{{ end }}
+  {{ partial "footer.html" . }}
+  {{ end }}
