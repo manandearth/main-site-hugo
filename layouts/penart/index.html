@@ -1,0 +1,12 @@
+d{{ define "main" }}
+<section class="wrapper style2">
+  <div class="inner">
+    <h1>Posts</h1>
+    <ul>
+      {{ range .Pages.ByDate.Reverse }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+{{ end }}
