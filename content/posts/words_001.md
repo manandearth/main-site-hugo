@@ -1,5 +1,5 @@
 ---
-title: "Relativity and anarchy"
+title: "Relativity and Anarchy"
 tags: ["words"]
 style: "style2 medium lightbox onscroll-fade-in"
 date: 2025-10-09
@@ -28,10 +28,12 @@ images:
     thumb: "images/issue_003/04.jpg"
     button: "Details"
 ---
-Is this the point where a socialist turned into an anarchist? Did this just happen? I never gave it thought really, I guess I thought it is just utopian, like all its critics do, as well as thinking it is probably not going to work, which is besides the point, as no other system prove to work, certainly not the current one.
+<p><span class="dropcap">I</span>s this the point where a socialist turned into an anarchist? Did this just happen? I never gave it thought really, I guess I thought it is just utopian, like all its critics do, as well as thinking it is probably not going to work, which is besides the point, as no other system prove to work, certainly not the current one.
 I'll start at that moment, or a couple of moments before, I was running up a hill, a hill that I run almost daily. It is not an easy climb, but I am used to it, and my mind alway wonders and I am at the top before I know it.
-I was thinking about something, not sure what, and the voice in my head was judging and calling one idea a 'mature' idea, and how for that reason this should be the accepted idea, being close to 'objective' and 'correct' and 'true', only at that moment it broke and I realised there is no objective and whatever idea will depend on perspective, on a point of view, and on context. So what we call 'mature' represents such point of view, and some interest in specific outcome.
+I was thinking about something, not sure what, and the voice in my head was judging and calling one idea a 'mature' idea, and how for that reason this should be the accepted idea, being close to 'objective' and 'correct' and 'true', only at that moment it broke and I realised there is no objective and whatever idea will depend on perspective, on a point of view, and on context. So what we call 'mature' represents such point of view, and some interest in specific outcome.</p>
+
 {{< img src="images/issue_003/color_inner_03.jpg" alt="stars are dust" caption="Stars are dust" class="center-image" >}}
+
 Every idea that someone adopts is not an orphan, it is selected if it reinforeced the individul's stance, justifies its existence and its behaviour. People are born to the left and to the right, those ideas appeal to them, as they suggest that they are alright, and they keep going.
 But then the problem is when some ideas contradict other ideas and there is a conflict. That conflict is there, because the individual ideas are fighting for the same spot, we created a system where ideas can't live next to eachother, ideas have to rule.
 And I thought... wait a minute... This is not how it works in nature. It is not the survival of the fittest, or whatever other evolutionary interpertation one might apply to describe it. In nature all the ideas live side by side, or in and out of eachother.

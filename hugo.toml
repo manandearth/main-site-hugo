@@ -34,3 +34,6 @@ publishDir = "public"
 [Params]
 
 [Params.social]
+
+[markup.goldmark.renderer]
+  unsafe = true
