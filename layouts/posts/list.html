@@ -1,17 +1,17 @@
 {{ define "main" }}
-{{ partial "header.html" . }}
-<section class="posts-list">
-  <h1>Photography</h1>
-  {{ range .Pages }}
-    <article>
-      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    <h4>{{ (time .Params.date).Format "January 2, 2006" }}</h4>
-      {{ $text := htmlUnescape .Plain }}
-      <p>{{ $text | truncate 200 "..." }}…</p>
-    </article>
-  {{ end }}
-</section>
-<link rel="stylesheet" href="{{ "css/posts.css" | relURL }}">
-<link rel="stylesheet" href="{{ "css/header.css" | relURL }}">
-{{ partial "footer" . }}
+  {{ partial "header.html" . }}
+  <section class="posts-list">
+    <h1>All Posts</h1>
+    {{ range .Pages }}
+      <article>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <h4>{{ (time .Params.date).Format "January 2, 2006" }}</h4>
+        {{ $text := htmlUnescape .Plain }}
+        <p>{{ $text | truncate 200 "..." }}</p>
+      </article>
+    {{ end }}
+  </section>
+     <link rel="stylesheet" href="{{ "css/posts.css" | relURL }}">
+     <link rel="stylesheet" href="{{ "css/header.css" | relURL }}">
+  {{ partial "footer.html" . }}
 {{ end }}

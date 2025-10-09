@@ -24,8 +24,11 @@ publishDir = "public"
 ## Hugo Built-in Features
 ## -----------------------------------------------
 
-disableKinds = ["taxonomy"]
+# disableKinds = ["taxonomy"]
 # googleAnalytics = "G-XXXXXXXXXX"
+[taxonomies]
+  tag = "tags"
+
 
 ## -----------------------------------------------
 ## Site Parameters

@@ -1,8 +1,8 @@
 ####################### Banner #########################
-style: "style1 orient-left content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right"
-title : "Adam Gefen"
+style: "top-margin style1 orient-left content-align-left image-position-center  onload-image-fade-in onload-content-fade-right"
+title : ""
 subtitle: |
-  <a href="/words">Writing</a> | <a href="/posts/">Photography</a> | <a href="/penart">Pen art</a> | Hikes | Projects |
+  contact: <a href="mailto:adamgefen@posteo.net">adamgefen@posteo.net</a>
 content : |
   Thank you for visiting my site. I am Adam, I am playing around with chemical photography and pen art, tinkering with machines and matter in genral, run, climb and hike in the wilderness that I find, mostly in the south of Spain, and trying to form meaningful pieces of text. Here I share like in the good old days the things I am passionate about, the things I wonder about, and the things I am trying to figure out.
 button:

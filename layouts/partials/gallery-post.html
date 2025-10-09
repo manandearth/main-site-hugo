@@ -1,7 +1,7 @@
 {{ if .Params.images }}
 <section id="gallery-post" class="wrapper style2">
   <div class="inner">
-    <h2>{{ .Title }}</h2>
+    <div class="post-title">{{ .Title }}<span class="issue-span"> -   Issue {{ .Params.issue }}</span></div>
     <h3>{{ (time .Params.date).Format "January 2, 2006" }}</h3>
   </div>
    <div class="gallery style2 medium lightbox onscroll-fade-in">

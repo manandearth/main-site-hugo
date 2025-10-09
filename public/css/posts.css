@@ -31,6 +31,7 @@ figcaption {
   gap: 3rem;
   margin: 3rem auto;
   max-width: 900px;
+  margin-top: 6rem;
 }
 
 .posts-list article h2 {
@@ -40,4 +41,11 @@ figcaption {
 .posts-list article p {
   color: #666;
   font-size: 1rem;
+}
+
+div.post-title {
+  font-size: 32px;
+}
+span.issue-span {
+  font-size: 18px;
 }

@@ -1,8 +1,12 @@
 {{ define "main" }}
-	{{ partial "banner" site.Data.banner }}
+    {{ partial "header.html" . }}
+    {{ partial "banner" site.Data.banner }}
+    <div class="spacer"> Recent highlights: </div>
 	{{ partial "spotlight" site.Data.spotlight1 }}
 	{{ partial "spotlight" site.Data.spotlight2 }}
 	{{ partial "gallery" site.Data.gallery }}
 	{{ partial "footer" . }}
+     <link rel="stylesheet" href="{{ "css/posts.css" | relURL }}">
+     <link rel="stylesheet" href="{{ "css/header.css" | relURL }}">
 
 {{ end }}

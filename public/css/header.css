@@ -1,9 +1,15 @@
+.top-margin {
+margin-top: 8rem;
+}
 .site-header {
   width: 100%;
   padding: 1.5rem 2rem;
   border-bottom: 1px solid rgba(0,0,0,0.1);
   display: flex;
   justify-content: center;
+  position: fixed;
+  background: white;
+  z-index: 10;
 }
 
 .nav {
@@ -38,4 +44,9 @@
 
 .nav-links a:hover {
   color: #000;
+}
+
+.spacer {
+  margin-left: 2rem;
+  font-size: 2rem;
 }
