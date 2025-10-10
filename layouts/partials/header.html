@@ -1,6 +1,12 @@
 <header class="site-header">
   <nav class="nav">
     <a href="{{ "/" | relURL }}" class="nav-logo">Adam Gefen</a>
+
+<!-- Hamburger toggle button (only visible on mobile) -->
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+
     <ul class="nav-links">
       <li><a href="{{ "/" | relURL }}">Main</a></li>
       <li><a href="{{ "/tags/photography" | relURL }}">Photography</a></li>
@@ -11,3 +17,12 @@
     </ul>
   </nav>
 </header>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const toggle = document.querySelector(".nav-toggle");
+  const links = document.querySelector(".nav-links");
+  toggle.addEventListener("click", () => {
+    links.classList.toggle("open");
+  });
+});
+</script>
