@@ -1,0 +1,35 @@
+<canvas id="{{ .Get "chartID" }}" width="400" height="300"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('{{ .Get "chartID" | default ""}}').getContext('2d');
+
+// Parse labels
+
+const labels = JSON.parse('{{ .Get "labels" | default "[]" | safeJS }}');
+const datasetLabels = JSON.parse('{{ .Get "datasetLabels" | default "[]" | safeJS }}');
+const rawData = JSON.parse('{{ .Get "datasetData" | default "[]" | safeJS }}');
+const rawColors = JSON.parse('{{ .Get "datasetColors" | default "[]" | safeJS }}');
+// Convert rawData strings into arrays of numbers
+const datasets = datasetLabels.map((label, i) => ({
+  label: label,
+  data: rawData[i].split(",").map(Number),
+  backgroundColor: rawColors[i]
+}));
+
+const config = {
+  type: "{{ .Get "type" | default "bar" }}",
+  data: {
+    labels: labels,
+    datasets: datasets
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'top' },
+      title: { display: true, text: "{{ .Get "title" | default "" }}" }
+    },
+    scales: { y: { beginAtZero: true } }
+  }
+};
+new Chart(ctx, config);
+</script>

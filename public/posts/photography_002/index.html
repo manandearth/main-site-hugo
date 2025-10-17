@@ -52,9 +52,9 @@
       <li><a href="../../">Main</a></li>
       <li><a href="../../tags/photography">Photography</a></li>
       <li><a href="../../tags/words/">Writing</a></li>
-      <li><a href="../../tags/hike/">Hike</a></li>
+      <li class="disabled">Hikes</li>
       <li><a href="../../tags/penart/">Pen art</a></li>
-      <li><a href="../../tags/projects/">Projects</a></li>
+      <li class="disabled">Projects</li>
     </ul>
   </nav>
 </header>
@@ -156,6 +156,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </div>
     
+<script>
+const gallery = document.querySelector('.gallery')
+ gallery.addEventListener('keydown', (e) => {  if(e.key === "Escape"){
+
+const modal = gallery.querySelector('.modal')
+modal.classList.remove('loaded', 'visible')
+ }})
+</script>
 
   
 <link rel="stylesheet" href="../../css/posts.css">

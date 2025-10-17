@@ -1,0 +1,138 @@
+{{ $csvPath := .Get "csv" }}
+{{ $csvContent := readFile (printf "static/%s" $csvPath) }}
+{{ $lines := split (trim $csvContent "\n\r") "\n" }}
+{{ $header := split (index $lines 0) "," }}
+{{ $rows := slice }}
+{{ range $i, $line := after 1 $lines }}
+  {{ $lineTrim := trim $line " \t\r\n" }}
+  {{ if gt (len $lineTrim) 0 }}
+    {{ $vals := split $lineTrim "," }}
+    {{ $row := dict }}
+    {{ range $j, $col := $header }}
+      {{ $row = merge $row (dict (trim $col "\"") (index $vals $j)) }}
+    {{ end }}
+    {{ $rows = $rows | append $row }}
+  {{ end }}
+{{ end }}
+
+
+<canvas id="{{ .Get "id" | default "scatterChart" }}" style="width:100%;height:1000px;"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
+<script>
+const data = {{ $rows }};  // pass in front matter or inline
+// Convert to numeric
+  const countrySet = new Set(data.map(d=>d['﻿country']));
+  const countries = Array.from(countrySet).sort();
+const selected = "{{ .Get "countries" | default "" }}".split(",").map(s => s.trim());
+const ctx = document.getElementById('{{ .Get "id" | default "scatterChart" }}').getContext('2d');
+
+function linearRegression(points) {
+  const n = points.length;
+  const sumX = points.reduce((a,p)=>a+Number(p.x),0);
+  const sumY = points.reduce((a,p)=>a+Number(p.y),0);
+  const sumXY = points.reduce((a,p)=>a+Number(p.x)*Number(p.y),0);
+  const sumX2 = points.reduce((a,p)=>a+Number(p.x)*Number(p.x),0);
+  const slope = (n*sumXY - sumX*sumY) / (n*sumX2 - sumX*sumX);
+  const intercept = (sumY - slope*sumX)/n;
+  return {slope, intercept};
+}
+
+function createDataset(label, color, accessor) {
+  const points = data.map(d => ({ x: Number(d["Income inequality"]), y: accessor(d), label: d.Country }));
+  const { slope, intercept } = linearRegression(points);
+
+ console.log('linearRegression', linearRegression(points))
+
+ console.log('points: ', points)
+
+
+  const minX = Math.min(...points.map(p => Number(p.x)));
+  const maxX = Math.max(...points.map(p => Number(p.x)));
+  const trend = [
+    { x: minX, y: slope * minX + intercept },
+    { x: maxX, y: slope * maxX + intercept }
+  ];
+
+ console.log('trend: ', trend)
+  return [
+    {
+      label,
+      data: points,
+      backgroundColor: color,
+      radius: 8,
+    },
+    {
+      label: `${label} trend`,
+      data: trend,
+      type: 'line',
+      borderColor: color,
+      borderWidth: 2,
+      pointRadius: 0,
+      fill: false,
+      borderDash: [6,3],
+      hidden: false, // always visible with dataset
+      skipLegend: true // custom flag for legend logic
+    }
+  ];
+}
+
+// Create datasets + trendlines
+const datasets = [
+  ...createDataset('Homicides', 'rgba(200,30,30,0.7)', d => Number(d["Homicides"])),
+  ...createDataset('Child overweight', 'rgba(30,100,200,0.7)', d => Number(d["Child overweight"])),
+  ...createDataset('Imprisonment', 'rgba(40,230,150,0.7)', d => Number(d["Imprisonment (log)"]))
+];
+
+const chart = new Chart(ctx, {
+  type: 'scatter',
+  data: { datasets },
+  options: {
+      responsive: true,
+      animation: false,
+      scales: {
+          x: {
+              title: { display: true, text: 'Income inequality (Gini coefficient)' },
+              min: Math.min(...data.map(d => d["Income inequality"])) - 1,
+              max: Math.max(...data.map(d => d["Income inequality"])) + 1
+          },
+          y: {
+              title: { display: true, text: 'Indicator value' }
+          }
+      },
+plugins: {
+      legend: {
+        position: 'top',
+        onClick: (e, legendItem, legend) => {
+          const ci = legend.chart;
+          const label = legendItem.text;
+          ci.data.datasets.forEach(ds => {
+            // hide all datasets and their trend lines except clicked one
+            if (!ds.skipLegend) {
+              const isTarget = ds.label === label;
+              ds.hidden = !isTarget;
+              const trend = ci.data.datasets.find(t => t.label === `${ds.label} trend`);
+              if (trend) trend.hidden = !isTarget;
+            }
+          });
+          ci.update();
+        }
+      },
+                tooltip: {
+              callbacks: {
+                  label: ctx => `${ctx.raw.label}: Gini ${ctx.raw.x}, Index ${ctx.raw.y}`
+        }
+          }
+
+},
+  },
+ });
+// show only first dataset + trend initially
+chart.data.datasets.forEach((ds, i) => {
+  const firstLabel = 'Homicides';
+  if (!ds.skipLegend && ds.label !== firstLabel)
+    ds.hidden = true;
+  if (ds.skipLegend && !ds.label.includes(firstLabel))
+    ds.hidden = true;
+});
+chart.update();
+</script>

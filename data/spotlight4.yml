@@ -1,0 +1,9 @@
+####################### Spotlight #########################
+style: "style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
+title : "Mountain drawings"
+content: |
+  Pen from images.Ink and rock.
+button:
+  label: "more"
+  link: "/posts/penart_001"
+image: "images/issue_004/06.jpg"

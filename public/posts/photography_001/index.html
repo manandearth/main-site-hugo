@@ -42,16 +42,31 @@
   <header class="site-header">
   <nav class="nav">
     <a href="../../" class="nav-logo">Adam Gefen</a>
+
+
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+
     <ul class="nav-links">
       <li><a href="../../">Main</a></li>
       <li><a href="../../tags/photography">Photography</a></li>
       <li><a href="../../tags/words/">Writing</a></li>
-      <li><a href="../../tags/hike/">Hike</a></li>
+      <li class="disabled">Hikes</li>
       <li><a href="../../tags/penart/">Pen art</a></li>
-      <li><a href="../../tags/projects/">Projects</a></li>
+      <li class="disabled">Projects</li>
     </ul>
   </nav>
 </header>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const toggle = document.querySelector(".nav-toggle");
+  const links = document.querySelector(".nav-links");
+  toggle.addEventListener("click", () => {
+    links.classList.toggle("open");
+  });
+});
+</script>
 
   
   
@@ -117,6 +132,14 @@ Art.
 
 </div>
     
+<script>
+const gallery = document.querySelector('.gallery')
+ gallery.addEventListener('keydown', (e) => {  if(e.key === "Escape"){
+
+const modal = gallery.querySelector('.modal')
+modal.classList.remove('loaded', 'visible')
+ }})
+</script>
 
   
 <link rel="stylesheet" href="../../css/posts.css">

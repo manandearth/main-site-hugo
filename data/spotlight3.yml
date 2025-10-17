@@ -1,7 +1,7 @@
 ####################### Spotlight #########################
 style: "style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
 id: "first"
-title : "Relativity and Anarchy"
+title : "What you see from here, you can't see from there"
 content: |
   Thoughts about political inclinations, relativity, maturity, nature and anarchy.
 button: 

@@ -2,7 +2,7 @@
 title: "Simancon"
 style: "style2 medium lightbox onscroll-fade-in"
 date: 2025-10-06T09:50:42+02:00
-draft: false
+draft: true
 tags: ["photography"]
 issue: "002"
 layout: "gallery"

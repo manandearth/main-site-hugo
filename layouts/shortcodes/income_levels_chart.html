@@ -1,0 +1,114 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+{{- $csvPath := .Get "csv" -}}
+{{- $csvContent := readFile (printf "static/%s" $csvPath) -}}
+
+{{- $lines := split (trim $csvContent "\n\r") "\n" -}}
+{{- $header := split (index $lines 0) "," -}}
+
+{{- $rows := slice -}}
+
+{{- range $i, $line := after 1 $lines -}}
+  {{- $lineTrimmed := trim $line " \t\r\n" -}}
+  {{- if gt (len $lineTrimmed) 0 -}}
+    {{- $values := split $lineTrimmed "," -}}
+    {{- $row := dict -}}
+    {{- range $j, $col := $header -}}
+      {{- $colName := trim (replace $col "\"" "") " " -}}
+      {{- $val := "" -}}
+      {{- if lt $j (len $values) -}}
+        {{- $val = trim (replace (index $values $j) "\"" "") " " -}}
+      {{- end -}}
+      {{- $row = merge $row (dict $colName $val) -}}
+    {{- end -}}
+    {{- $rows = $rows | append $row -}}
+  {{- end -}}
+{{- end -}}
+
+<div class="chart-container" style="position:relative; width:100%; max-width:800px; height:400px; margin:auto;">
+  <canvas id="{{ .Get "id" | default "incomeChart" }}"></canvas>
+</div>
+
+<script>
+(function() {
+  const chartID = "{{ .Get "id" | default "incomeChart" }}";
+  const title = "{{ .Get "title" | default "Rising Global Income (Factfulness / Gapminder)" }}";
+
+  if (window.__charts && window.__charts[chartID]) return;
+  if (!window.__charts) window.__charts = {};
+  const csvData = {{ $rows }};
+
+  const years = [];
+  const series = {};
+
+csvData.forEach(r => {
+    years.push(r.time);
+    Object.keys(r).forEach(k => {
+      if (k !== "time" && r[k] !== "") {
+        if (!series[k]) series[k] = [];
+      }
+    });
+  });
+
+  const levels = Object.keys(csvData[0]).filter(k => k !== "time");
+
+  // Initialize all series to correct length
+  levels.forEach(l => {
+    series[l] = Array(years.length).fill(0);
+  });
+
+  // Populate data, keeping alignment
+  csvData.forEach((r, i) => {
+    levels.forEach(l => {
+      const val = +r[l] || 0;
+      series[l][i] = val;
+    });
+  });
+
+  // Normalize per year (so totals per year = 100%)
+  const totals = years.map((_, i) =>
+    levels.reduce((sum, l) => sum + (series[l][i] || 0), 0)
+  );
+
+  const normalized = levels.map(l =>
+    series[l].map((v, i) => (v / (totals[i] || 1)) * 100)
+  );
+
+
+  const colors = [
+    'rgba(200,30,30,0.6)',
+    'rgba(255,140,0,0.6)',
+    'rgba(250,200,50,0.6)',
+    'rgba(40,150,60,0.6)',
+    'rgba(50,50,150,0.6)'
+  ];
+
+  const ctx = document.getElementById(chartID).getContext('2d');
+  const chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: years,
+      datasets: levels.map((l, i) => ({
+        label: l,
+        data: normalized[i],
+        fill: true,
+        backgroundColor: colors[i % colors.length],
+        borderColor: colors[i % colors.length].replace('0.6', '1'),
+        pointRadius: 0,
+        tension: 0.3
+      }))
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: { title: { display: true, text: 'Year' } },
+        y: { stacked: true, beginAtZero: true, max: 100, title: { display: true, text: '% of world population' } }
+      },
+      plugins: { title: { display: true, text: title } }
+    }
+  });
+
+  window.__charts[chartID] = chart;
+})();
+</script>

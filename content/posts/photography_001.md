@@ -3,7 +3,7 @@ title: "Scratchy cut film"
 tags: ["photography"]
 style: "style2 medium lightbox onscroll-fade-in"
 date: 2025-10-05
-draft: false
+draft: true
 issue: "001"
 layout: "gallery"
 content: |
