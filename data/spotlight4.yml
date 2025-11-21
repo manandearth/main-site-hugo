@@ -1,9 +1,9 @@
 ####################### Spotlight #########################
-style: "style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
-title : "Mountain drawings"
+style: "style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
+title : "News Bias"
 content: |
-  Pen from images.Ink and rock.
+  Advice for young artists.
 button:
   label: "more"
-  link: "/posts/penart_001"
-image: "images/issue_004/06.jpg"
+  link: "/posts/words_002"
+image: "images/issue_005/01.jpg"

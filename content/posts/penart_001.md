@@ -3,7 +3,7 @@ title: "Mountain Ink"
 tags: ["penart"]
 style: "style2 medium lightbox onscroll-fade-in"
 date: 2025-10-14
-draft: true
+draft: false
 issue: "004"
 layout: "gallery"
 content: |
@@ -75,3 +75,8 @@ I don't know why I started to draw with ballpoint. I think it was Sophie that sa
 So as I mention above I use my memory now and not references, generally that is, it is not a strict rule. Looking through my older notebooks I put together the mountain drawings, Rocks.
 Rocks and memory. I climb. My climbing companions as a rule remember the rock better than me. Climbers seem to be keen to give the beta to other climbers when they notice that they struggle or hesitate. So me with the poor rock memory, I look at the rock alot, and feel it alot, and get shouted from up or down: "there's a good foot just to the left of your knee" or just get a bit higher and you'll find a bomber hold on the right", or "number 4 fits in the crack under that bulge" and so on... I am happy to climb the same route, every time it is different for me, everytime it is new. I might try mapping out a route, for art, or for utility, to get familiar, to see what they see. till now I drew those from reference, perhaps now I could draw from imagination, which is also a kind of a memory.
 
+{{< bird_migration_chart
+   id="birdMigrationChart"
+   csv="data/bird_migration_001.csv"
+   title="Migration"
+>}}
