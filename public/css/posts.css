@@ -89,7 +89,7 @@ span.issue-span {
   font-size: 18px;
 }
 span.dropcap {
-  font-family: serif;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 2.5rem;
   margin: 0.25rem;
   line-height: 2rem;
@@ -100,4 +100,12 @@ div.post-date-tag {
     background: lightgray;
     margin-left: 15px;
   }
+}
+#streamChart {
+  width: 100%;
+  height: 1500px;
+}
+.chart-wrapper {
+ position: relative;
+  height: 1800px;   /* taller chart */
 }

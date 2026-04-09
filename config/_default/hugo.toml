@@ -36,6 +36,8 @@ publishDir = "public"
 
 [Params]
 
+customCSS = ["css/custom.css"]
+
 [Params.social]
 
 [Params.asset]

@@ -34,7 +34,7 @@ The language of art and the language of speaking about art are piercing, and I t
 Really observing is what it is about, really noticing. and unlike scientific observation, this noticing is creative observation, it creatively exposes, intelligently exposes what then cannot be denied.
 To consume art is to give attention, an attention that's different to the attention given as a passive spectator of a television show or an online video post. Art is written in a language both familiar and cryptic, we need to create the space and quietness to tune in.
 </p>
-{{< img src="images/issue_005/color_inner_01.jpg" alt="stars are dust" caption="Stars are dust" class="center-image" >}}
+{{< img src="images/issue_005/color_inner_01.jpg" alt="Paper flowers" caption="Paper flowers" class="center-image" >}}
 <p>I am entering the game late, that is a familiar place for me, as most games I entered either young and unprepared, or late and unassuming. I am used to see art from a personal point of view, as a mark of an individual, the artist. The body of work a continuous thread. The mature artist shows a coherent thread. This game though, is a different one, art is a voice, a language. The artist has a thing to communicate, it is urgent and inevitable. It is political, it shows a thing in the world. The artist craftly presents it. The message here is read clearly. Art is a form of communication.</p>
 {{< img src="images/issue_005/color_inner_02.jpg" alt="Twig light" caption="Twig light" class="center-image" >}}
 <p>
