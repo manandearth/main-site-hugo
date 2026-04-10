@@ -2,6 +2,7 @@
   {{ partial "header.html" . }}
   <section class="posts-list">
     <h1>All Posts</h1>
+  {{ if and .Title (ne .Date.Year 1) }}
     {{ range .Pages }}
       <article>
         <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
@@ -12,6 +13,7 @@
         {{ $text := htmlUnescape .Plain }}
         <p>{{ $text | truncate 200 "..." }}</p>
       </article>
+    {{ end }}
     {{ end }}
   </section>
      <link rel="stylesheet" href="{{ "css/posts.css" | relURL }}">

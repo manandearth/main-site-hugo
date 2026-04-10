@@ -1,5 +1,9 @@
 <article>
-    <a href="{{ .image }}" class="image">
+    {{ if .link }}
+        <a href="{{ .link }}" class="image no-lightbox">
+    {{ else }}
+        <a href="{{ .image }}" class="image">
+    {{ end }}
         <img src="{{ .thumb }}" alt="" />
     </a>
     <div class="caption">
