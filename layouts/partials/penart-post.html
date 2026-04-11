@@ -4,10 +4,10 @@
     <div class="post-title">{{ .Title }}<span class="issue-span"> -   Issue {{ .Params.issue }}</span></div>
     <h3>{{ (time .Params.date).Format "January 2, 2006" }}</h3>
   </div>
-   <div class="gallery style2 medium lightbox onscroll-fade-in">
+   <div class="gallery style2 small lightbox onscroll-fade-in">
       {{ range .Params.images }}
         <article>
-            <a href="{{ .image | relURL }}" class="image"><img src="{{ .image | relURL }}"></img></a>
+            <a href="{{ .image | relURL }}" class="image"><img src="{{ .thumb | relURL }}"></img></a>
               <div class="caption"><p>{{ .caption }}</p></div>
         </article>
       {{ end }}

@@ -9,32 +9,34 @@ layout: "gallery"
 content: |
 inlineImage: "images/issue_001/01.jpg"
 images:
-  - image: "images/issue_001/vejer_from_cross.jpg"
-    title: "Title"
-    thumb: "images/issue_001/01.jpg"
-    content: "Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices."
-    button: "Details"
+
   - image: "images/issue_001/01.jpg"
     title: "Title"
-    thumb: "images/issue_001/01.jpg"
+    thumb: "images/issue_001/01_thumbnail.jpg"
     content: "Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices."
     button: "Details"
 
   - image: "images/issue_001/02.jpg"
     title: "Title"
-    thumb: "images/issue_001/02.jpg"
+    thumb: "images/issue_001/02_thumbnail.jpg"
     content: "Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices."
     button: "Details"
     
   - image: "images/issue_001/03.jpg"
     title: "Title"
-    thumb: "images/issue_001/03.jpg"
+    thumb: "images/issue_001/03_thumbnail.jpg"
     content: "Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices."
     button: "Details"
 
   - image: "images/issue_001/04.jpg"
     title: "Title"
-    thumb: "images/issue_001/04.jpg"
+    thumb: "images/issue_001/04_thumbnail.jpg"
+    content: "Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices."
+    button: "Details"
+    
+  - image: "images/issue_001/vejer_from_cross.jpg"
+    title: "Title"
+    thumb: "images/issue_001/05_thumbnail.jpg"
     content: "Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices."
     button: "Details"
 ---

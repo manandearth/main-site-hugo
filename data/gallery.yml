@@ -26,3 +26,9 @@ pictures:
     thumb: "images/issue_004/10_thumbnail.jpg"
     link: "/posts/penart_001/"
     button: "Details"
+    
+  - title: "Abejaruco"
+    content: "Water overground"
+    thumb: "images/issue_009/03_thumbnail.jpg"
+    link: "/posts/photography_003/"
+    button: "Details"
