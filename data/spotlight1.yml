@@ -1,10 +1,10 @@
 ####################### Spotlight #########################
-style: "style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
+style: "style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
 id: "first"
-title : "Scratchy cut film"
+title : "Retention"
 content: |
-  A few examples of the light around Vejer, or how it is captured on a baby Graphlex camera from the 1930s...
+  About language and memory...
 button: 
   label: "more"
-  link: "/posts/photography_001"
-image: "images/issue_001/01.jpg"
+  link: "/posts/words_003"
+image: "images/issue_006/03.jpg"
