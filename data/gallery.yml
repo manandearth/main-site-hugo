@@ -32,3 +32,9 @@ pictures:
     thumb: "images/issue_009/03_thumbnail.jpg"
     link: "/posts/photography_003/"
     button: "Details"
+    
+  - title: "Pinhole"
+    content: "Pinhole images"
+    thumb: "images/issue_010/03_thumbnail.jpg"
+    link: "/posts/photography_004/"
+    button: "Details"
