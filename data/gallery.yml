@@ -38,3 +38,9 @@ pictures:
     thumb: "images/issue_010/03_thumbnail.jpg"
     link: "/posts/photography_004/"
     button: "Details"
+    
+  - title: "Livestock"
+    content: "Farming images"
+    thumb: "images/issue_012/01_thumbnail.jpg"
+    link: "/posts/photography_005/"
+    button: "Details"
