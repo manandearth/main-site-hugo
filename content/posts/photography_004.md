@@ -2,7 +2,6 @@
 title: "pinhole"
 style: "style2 medium lightbox onscroll-fade-in"
 date: 2026-04-16T09:50:42+02:00
-draft: false
 tags: ["photography"]
 issue: "010"
 layout: "gallery"

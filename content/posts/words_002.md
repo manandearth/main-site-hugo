@@ -3,7 +3,6 @@ title: "News bias"
 tags: ["words"]
 style: "style2 medium lightbox onscroll-fade-in"
 date: 2025-11-14
-draft: false
 issue: "005"
 content: |
 inlineImage: "images/issue_003/01.jpg"

@@ -3,7 +3,6 @@ title: "Things you see from here, you don't see from there"
 tags: ["words"]
 style: "style2 medium lightbox onscroll-fade-in"
 date: 2025-10-09
-draft: false
 issue: "003"
 content: |
 inlineImage: "images/issue_003/01.jpg"
