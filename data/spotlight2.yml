@@ -3,6 +3,7 @@ style: "style1 orient-left content-align-left image-position-center onscroll-ima
 title : "Simancon"
 content: |
   Up on the second highest peak in the Sierra de Cádiz
+excerpt: 300          # optional; omit it and nothing changes
 button: 
   label: "more"
   link: "/posts/photography_002"

@@ -2,8 +2,7 @@
 style: "style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
 id: "first"
 title : "Reorientation"
-content: |
-  Thoughtfulness...
+excerpt: 328
 button: 
   label: "read more"
   link: "/posts/words_005"

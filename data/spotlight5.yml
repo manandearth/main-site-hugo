@@ -2,8 +2,7 @@
 style: "style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
 id: "first"
 title : "Relevancy"
-content: |
-  About memory and mortality.
+excerpt: 250
 button: 
   label: "read more"
   link: "/posts/words_004"

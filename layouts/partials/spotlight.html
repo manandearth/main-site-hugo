@@ -1,13 +1,20 @@
 <!-- Spotlight -->
+{{ $spot := . }}
 <section class="spotlight {{ .style }}"{{ with .id }} id="{{ . }}"{{ end }}>
     <div class="content">
+<a href="{{ .link }}">
         {{ with .title }}<h2>{{ . }}</h2>{{ end }}
+</a>
         {{ with .content }}<p>{{ . | safeHTML }}</p>{{ end }}
-        {{ with .button }}<ul class="actions stacked">
-            <li><a href="{{ .link }}" class="button">{{ .label }}</a></li>
-        </ul>{{ end }}
+        {{ with $spot.excerpt }}
+            {{ $len := . }}
+            {{ with $spot.button }}{{ with site.GetPage .link }}
+                <p>{{ .Plain | truncate $len }}</p>
+            {{ end }}{{ end }}
+        {{ end }}
     </div>
-    {{ with .image }}<div class="image">
+    {{ with .image }}
+    <div class="image">
         <img src="{{ . }}" alt="" />
     </div>{{ end }}
 </section>
