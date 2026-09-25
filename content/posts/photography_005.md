@@ -3,7 +3,6 @@ title: "livestock"
 style: "style2 medium lightbox onscroll-fade-in"
 date: 2026-06-12T22:12:47+02:00
 tags: ["photography"]
-issue: "012"
 layout: "gallery"
 content: |
 inlineImage: "images/photography_005/color_inner.jpg"

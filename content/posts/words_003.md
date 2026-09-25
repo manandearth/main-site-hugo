@@ -4,7 +4,6 @@ tags: ["words"]
 style: "style2 medium lightbox onscroll-fade-in"
 date: 2025-12-13
 draft: false
-issue: "006"
 content: |
 inlineImage: "images/issue_003/01.jpg"
 ---

@@ -3,7 +3,6 @@ title: "pinhole"
 style: "style2 medium lightbox onscroll-fade-in"
 date: 2026-04-16T09:50:42+02:00
 tags: ["photography"]
-issue: "010"
 layout: "gallery"
 content: |
 inlineImage: "images/photography_004/color_inner.jpg"

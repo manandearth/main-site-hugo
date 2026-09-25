@@ -4,7 +4,6 @@ tags: ["penart"]
 style: "style2 medium lightbox onscroll-fade-in"
 date: 2026-04-09
 draft: false
-issue: "008"
 layout: "gallery"
 content: |
 inlineImage: "images/penart_002/01.jpg"
