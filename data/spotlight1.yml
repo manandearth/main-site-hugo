@@ -4,7 +4,5 @@ id: "first"
 title : "Retention"
 content: |
 excerpt: 325          # optional; omit it and nothing changes
-button: 
-  label: "more"
-  link: "/posts/words_003"
+link: "/posts/words_003"
 image: "images/words_003/03.jpg"

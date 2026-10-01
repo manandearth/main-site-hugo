@@ -1,20 +1,22 @@
 <!-- Spotlight -->
 {{ $spot := . }}
+{{ $link := .link }}
 <section class="spotlight {{ .style }}"{{ with .id }} id="{{ . }}"{{ end }}>
     <div class="content">
-<a href="{{ .link }}">
-        {{ with .title }}<h2>{{ . }}</h2>{{ end }}
-</a>
+        {{ with .title }}
+            <h2>{{ if $link }}<a href="{{ $link }}">{{ . }}</a>{{ else }}{{ . }}{{ end }}</h2>
+        {{ end }}
         {{ with .content }}<p>{{ . | safeHTML }}</p>{{ end }}
         {{ with $spot.excerpt }}
             {{ $len := . }}
-            {{ with $spot.button }}{{ with site.GetPage .link }}
+            {{ with site.GetPage $link }}
                 <p>{{ .Plain | truncate $len }}</p>
-            {{ end }}{{ end }}
+            {{ end }}
         {{ end }}
     </div>
     {{ with .image }}
     <div class="image">
-        <img src="{{ . }}" alt="" />
+        {{ if $link }}<a href="{{ $link }}"><img src="{{ . }}" alt="" /></a>
+        {{ else }}<img src="{{ . }}" alt="" />{{ end }}
     </div>{{ end }}
 </section>

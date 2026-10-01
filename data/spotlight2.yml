@@ -4,7 +4,5 @@ title : "Simancon"
 content: |
   Up on the second highest peak in the Sierra de Cádiz
 excerpt: 300          # optional; omit it and nothing changes
-button: 
-  label: "more"
-  link: "/posts/photography_002"
+link: "/posts/photography_002"
 image: "images/photography_002/color_cover.jpg"

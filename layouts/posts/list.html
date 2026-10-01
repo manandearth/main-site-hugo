@@ -7,7 +7,9 @@
       <article>
         <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
         <div class="post-date-tag">
+        {{ if not (in .Params.tags "newsletter")  }}
           <h4>{{ (time .Params.date).Format "January 2, 2006" }}</h4>
+        {{ end }}
           <p>{{index .Params.tags 0}}</p>
         </div>
         {{ $text := htmlUnescape .Plain }}

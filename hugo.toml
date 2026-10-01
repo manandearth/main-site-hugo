@@ -37,3 +37,12 @@ publishDir = "public"
 
 [markup.goldmark.renderer]
   unsafe = true
+
+## -----------------------------------------------
+## Email newsletter format
+## -----------------------------------------------
+
+[outputFormats.email]
+  mediaType = "text/html"
+  baseName  = "email"
+  isHTML    = true

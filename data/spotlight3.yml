@@ -3,7 +3,5 @@ style: "style1 orient-left content-align-left image-position-center onscroll-ima
 id: "first"
 title : "What you see from here, you can't see from there"
 excerpt: 398 
-button: 
-  label: "read more"
-  link: "/posts/words_001"
+link: "/posts/words_001"
 image: "images/words_001/04.jpg"

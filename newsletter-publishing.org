@@ -1,0 +1,41 @@
+#+title: Newsletter Publishing
+* to publish a newsletter
+To remove the dev files ( relative links and so on )
+
+#+BEGIN_SRC sh
+rm -rf public
+#+END_SRC
+
+To build
+#+BEGIN_SRC sh
+hugo
+#+END_SRC
+this script now builds using web and mail templates so creates two posts for each
+
+To add inline css with juice ( the script looks inside the folder posts )
+#+BEGIN_SRC sh
+node scripts/email-export.js newsletter_001
+#+END_SRC
+(The actual output will be /posts/newsletter_001/email.html)
+the result will be inside /email-ready
+
+It can be copied over to the buttondown editor, or sent to the emails with:
+#+BEGIN_SRC sh
+node -e ' 
+  const fs = require("fs");
+  const html = fs.readFileSync("/home/agefen/hugo-sites/main-site-hugo/email-ready/newsletter_001.html", "utf8");
+  fs.writeFileSync("/tmp/bd-payload.json", JSON.stringify({
+    subject: "Your subject line here",
+    body: html,
+    template: "naked",
+    status: "draft"
+  }));
+'
+#+END_SRC
+
+#+BEGIN_SRC sh
+curl -X POST https://api.buttondown.com/v1/emails \
+  -H "Authorization: Token $BUTTONDOWN_API_KEY" \
+  -H "Content-Type: application/json" \
+  --data-binary @/tmp/bd-payload.json
+#+END_SRC

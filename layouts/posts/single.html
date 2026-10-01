@@ -8,6 +8,8 @@
     {{ partial "words-post.html" . }}
   {{ else if in $tags "photography"}}
     {{ partial "gallery-post.html" . }}
+  {{ else if in $tags "newsletter"}}
+    {{ partial "newsletter-post.html" . }}
   {{ else }}
     {{ partial "default-post.html" . }}
   {{ end }}

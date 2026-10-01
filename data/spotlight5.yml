@@ -3,7 +3,5 @@ style: "style1 orient-left content-align-left image-position-center onscroll-ima
 id: "first"
 title : "Relevancy"
 excerpt: 250
-button: 
-  label: "read more"
-  link: "/posts/words_004"
+link: "/posts/words_004"
 image: "images/words_004/03.jpg"

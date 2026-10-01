@@ -2,11 +2,20 @@
   {{ partial "header.html" . }}
   <section class="posts-list">
     <h1>{{ .Title }}</h1>
+    {{ if in .Data.Term "newsletter" }}
+    {{ partial "subscribe.html" . }}
+
+    <h2>Archive:</h2>
+
+    {{ end }}
 
     {{ range .Pages }}
       <article>
         <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+
+        {{ if not (in .Params.tags "newsletter")  }}
         <h4>{{ (time .Params.date).Format "January 2, 2006" }}</h4>
+        {{ end  }}
         {{ $text := htmlUnescape .Plain }}
         <p>{{ $text | truncate 200 "..." }}</p>
       </article>
