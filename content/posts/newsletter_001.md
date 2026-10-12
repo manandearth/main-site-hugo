@@ -2,7 +2,7 @@
 title: "manandearth, October 2026"
 tags: ["newsletter"]
 style: "style2 medium lightbox onscroll-fade-in"
-date: 2026-09-03
+date: 2026-10-20
 draft: true
 ---
 
