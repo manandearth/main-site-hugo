@@ -2,10 +2,6 @@
 style: "top-margin style1 orient-left content-align-left image-position-center  onload-image-fade-in onload-content-fade-right"
 title : ""
 subtitle: |
-  contact: <a href="mailto:adamgefen@posteo.net">adamgefen@posteo.net</a>
 content : |
-  Thank you for visiting my site. I am Adam, I am playing around with chemical photography and pen art, tinkering with machines and matter in genral, run, climb and hike in the wilderness that I find, mostly in the south of Spain, and trying to form meaningful pieces of text. Here I share like in the good old days the things I am passionate about, the things I wonder about, and the things I am trying to figure out.
-button:
-  label : "Get Started"
-  link : "#first"
+  Thank you for visiting my site. I am Adam. I play with chemical photography and draw with a pen. I run, climb and hike in the wilderness that I find, mostly in the south of Spain, and I try to form meaningful pieces of text. Here I share the things that I am passionate about, the things I wonder about, and mostly the things that I am trying to figure out.
 image : "images/banner2.jpg"

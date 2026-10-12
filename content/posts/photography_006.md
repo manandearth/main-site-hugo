@@ -24,6 +24,24 @@ images:
   - image: "images/photography_006/04.jpg"
     title: "Title"
     thumb: "images/photography_006/04_thumbnail.jpg"
+    
+  - image: "images/photography_006/05.jpg"
+    title: "Title"
+    thumb: "images/photography_006/05_thumbnail.jpg"
+    
+  - image: "images/photography_006/06.jpg"
+    title: "Title"
+    thumb: "images/photography_006/06_thumbnail.jpg"
+    
+  - image: "images/photography_006/07.jpg"
+    title: "Title"
+    thumb: "images/photography_006/07_thumbnail.jpg"
+
+  - image: "images/photography_006/08.jpg"
+    title: "Title"
+    thumb: "images/photography_006/08_thumbnail.jpg"
+
+
 ---
 <p><span class="dropcap">I</span> go out with my camera looking for a picture, half the times I come back not taken one shot, the other half I either took a shot in the last light out of desperation, took the last shot a minute before something worth shooting showed, missed an opportunity because my mind was elsewhere, or took a really good one, but think I forgot to set the aperture, or left the cap on, or forgot to turn the film holder around, or...  When I finally develop I might find that both negatives in a film holder were loaded on the same side, or the fixer was not good anymore, or I forgot to account for the film being pushed or pulled by a stop, or the negative is solid white or solid black. seem like there's an infinite number of errors to commit as I keep committing new ones.
 The <a href="https://camera-wiki.org/wiki/Graflex_Series_B" target="_blank">Graflex series B reflex</a> is a wooden box 20cm by 18 by 15, weighing two and half kilos. I carry it in my rucksack, some level of commitment is required to take a shot. from this perspective, my photography is all about constraints, zero freedom, it is working against where photography was going from the onset. Funny that this camera I use was marketed for taking family portraits for it's simplicity...</p>

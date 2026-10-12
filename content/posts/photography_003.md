@@ -60,6 +60,13 @@ images:
     thumb: "images/photography_003/09_thumbnail.jpg"
     content: "Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices."
     button: "Details"
+    
+  - image: "images/photography_003/10.jpg"
+    title: "Title"
+    thumb: "images/photography_003/10_thumbnail.jpg"
+    content: "Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices."
+    button: "Details"
+
 
 ---
 

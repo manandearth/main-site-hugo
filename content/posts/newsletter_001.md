@@ -21,3 +21,6 @@ My son, Noah, find my interest in old cameras funny. The number of measurements 
 
 Zadie Smith has a lot to say about why it is, but being a novelist, her conclusions are interesting both for self and for society:
 <p class="quote">"They've been right about everything, as every generation is in its own way. Only ever missing one vital piece of data about time and its passing: How it feels." <a href="https://openlibrary.org/books/OL60828975M/Dead_and_Alive" target="_blank_"> Dead and Alive </a> </p>
+<a href="https://www.adamgefen.com/posts/photography_006/" target="_blank">link to the roadkill/tipping photography post</a>
+<a href="https://www.adamgefen.com/posts/penart_004/" target="_blank">link to the fountain transformation pen art post</a>
+<a href="https://www.adamgefen.com/posts/words_006/" target="_blank">link to the cars words post</a>
