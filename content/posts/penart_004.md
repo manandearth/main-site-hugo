@@ -95,13 +95,7 @@ images:
     thumb: "images/penart_004/15_thumbnail.jpg"
     content: "Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices."
     button: "Details" 
-    
-  - image: "images/penart_004/16.jpg"
-    title: "Title"
-    thumb: "images/penart_004/16_thumbnail.jpg"
-    content: "Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices."
-    button: "Details"
-    
+   
   - image: "images/penart_004/17.jpg"
     title: "Title"
     thumb: "images/penart_004/17_thumbnail.jpg"
