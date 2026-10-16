@@ -3,7 +3,7 @@ title: "fountain transformation"
 tags: ["penart"]
 date: 2026-10-03T00:20:11+02:00
 style: "style2 medium lightbox onscroll-fade-in"
-draft: true
+draft: false
 layout: "gallery"
 content: |
 inlineImage: "images/penart_004/01.jpg"

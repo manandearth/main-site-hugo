@@ -1,7 +1,8 @@
 ####################### Spotlight #########################
-style: "style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
+style: "style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
 id: "first"
 title : "Relevancy"
-excerpt: 250
+excerpt_start: 0
+excerpt_end: 250        # optional; omit it and nothing changes
 link: "/posts/words_004"
 image: "images/words_004/03.jpg"

@@ -2,8 +2,8 @@
 title: "manandearth, October 2026"
 tags: ["newsletter"]
 style: "style2 medium lightbox onscroll-fade-in"
-date: 2026-10-20
-draft: true
+date: 2026-10-16
+draft: false
 ---
 
 <p><span class="dropcap">T</span>his newsletter is about figuring things out and making mistakes along the way.</p>

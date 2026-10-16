@@ -3,30 +3,45 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/posts/newsletter_001/</loc>
+    <lastmod>2026-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/newsletter/</loc>
+    <lastmod>2026-10-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/</loc>
-    <lastmod>2026-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/penart/</loc>
-    <lastmod>2026-07-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/posts/penart_003/</loc>
-    <lastmod>2026-07-09T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
+    <lastmod>2026-10-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/photography/</loc>
+    <lastmod>2026-10-09T19:47:22+02:00</lastmod>
+  </url><url>
+    <loc>/posts/photography_006/</loc>
+    <lastmod>2026-10-09T19:47:22+02:00</lastmod>
+  </url><url>
+    <loc>/posts/penart_004/</loc>
+    <lastmod>2026-10-03T00:20:11+02:00</lastmod>
+  </url><url>
+    <loc>/tags/penart/</loc>
+    <lastmod>2026-10-03T00:20:11+02:00</lastmod>
+  </url><url>
+    <loc>/posts/words_006/</loc>
+    <lastmod>2026-10-01T12:15:08+02:00</lastmod>
+  </url><url>
+    <loc>/tags/words/</loc>
+    <lastmod>2026-10-01T12:15:08+02:00</lastmod>
+  </url><url>
+    <loc>/posts/penart_003/</loc>
     <lastmod>2026-07-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/photography_005/</loc>
     <lastmod>2026-06-12T22:12:47+02:00</lastmod>
   </url><url>
-    <loc>/tags/photography/</loc>
-    <lastmod>2026-06-12T22:12:47+02:00</lastmod>
-  </url><url>
     <loc>/posts/words_005/</loc>
-    <lastmod>2026-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/words/</loc>
     <lastmod>2026-04-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/photography_004/</loc>
@@ -58,7 +73,5 @@
   </url><url>
     <loc>/posts/photography_001/</loc>
     <lastmod>2025-10-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/newsletter/</loc>
   </url>
 </urlset>

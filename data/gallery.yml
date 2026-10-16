@@ -3,9 +3,21 @@ style: "style2 medium lightbox onscroll-fade-in"
 content: |
         <p>Click on the images for related posts</p>
 pictures:
+  - title: "Fountain transformation"
+    content: "done with ballpoint (for now)"
+    thumb: "images/penart_004/front_thumbnail.jpg"
+    button: "Details"
+    link: "/posts/penart_004/"
+
+  - title: "Roadkill"
+    content: "and tipping"
+    thumb: "images/photography_006/front_thumbnail.jpg"
+    button: "Details"
+    link: "/posts/photography_006/"
+
   - title: "Still here"
     content: "Ink is here to stay"
-    thumb: "images/penart_003/26_thumbnail.jpg"
+    thumb: "images/penart_003/front_thumbnail.jpg"
     button: "Details"
     link: "/posts/penart_003/"
 

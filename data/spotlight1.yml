@@ -1,8 +1,9 @@
 ####################### Spotlight #########################
-style: "style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
+style: "style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
 id: "first"
 title : "Retention"
 content: |
-excerpt: 325          # optional; omit it and nothing changes
+excerpt_start: 0
+excerpt_end: 325          # optional; omit it and nothing changes
 link: "/posts/words_003"
 image: "images/words_003/03.jpg"

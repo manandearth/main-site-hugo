@@ -7,10 +7,16 @@
             <h2>{{ if $link }}<a href="{{ $link }}">{{ . }}</a>{{ else }}{{ . }}{{ end }}</h2>
         {{ end }}
         {{ with .content }}<p>{{ . | safeHTML }}</p>{{ end }}
-        {{ with $spot.excerpt }}
-            {{ $len := . }}
+        {{ if and $link (or $spot.excerpt_start $spot.excerpt_end) }}
             {{ with site.GetPage $link }}
-                <p>{{ .Plain | truncate $len }}</p>
+                {{ $text := .Plain }}
+                {{ $total := strings.RuneCount $text }}
+                {{ $start := int (default 0 $spot.excerpt_start) }}
+                {{ $end := int (default $total $spot.excerpt_end) }}
+                {{ if gt $end $total }}{{ $end = $total }}{{ end }}
+                {{ if gt $end $start }}
+                    <p>{{ substr $text $start (sub $end $start) }}</p>
+                {{ end }}
             {{ end }}
         {{ end }}
     </div>
