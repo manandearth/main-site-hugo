@@ -17,6 +17,7 @@
 <dialog id="subscribe-modal" class="subscribe-modal" aria-labelledby="subscribe-modal-title">
   <h2 id="subscribe-modal-title"></h2>
   <p id="subscribe-modal-body"></p>
+  <button type="button" id="subscribe-modal-verify" hidden>Verify and subscribe</button>
   <button type="button" class="subscribe-modal-close">Close</button>
 </dialog>
 
@@ -34,16 +35,48 @@
   var modal = document.getElementById('subscribe-modal');
   var title = document.getElementById('subscribe-modal-title');
   var body  = document.getElementById('subscribe-modal-body');
+  var verifyBtn = document.getElementById('subscribe-modal-verify');
+  var pending = null; // { form, input, btn } while a verification is waiting
 
-  function showModal(t, msg) {
+  function showModal(t, msg, needsVerify) {
     title.textContent = t;
     body.textContent = msg;
+    verifyBtn.hidden = !needsVerify;
     modal.showModal();
+  }
+
+  function showAlmostThere(extra) {
+    showModal('Almost there!',
+      (extra || '') + 'Please check your inbox and confirm your subscription.', false);
   }
 
   // Close via button, backdrop click (Esc works natively)
   modal.querySelector('.subscribe-modal-close').addEventListener('click', function () { modal.close(); });
   modal.addEventListener('click', function (e) { if (e.target === modal) modal.close(); });
+
+  // Buttondown held the signup behind a Turnstile challenge: submit the form
+  // natively into a small window so the person sees and completes it, and
+  // meanwhile show the same "Almost there" message as a normal signup.
+  // Done from a click handler so popup blockers allow it.
+  verifyBtn.addEventListener('click', function () {
+    if (!pending) return;
+    var form = pending.form, input = pending.input, btn = pending.btn;
+    pending = null;
+
+    var win = window.open('', 'subscribeVerify', 'width=480,height=640');
+    form.target = win ? 'subscribeVerify' : '_blank';
+    form.submit();                 // native submit() does not re-trigger the submit listener
+    form.target = '';
+
+    // reset after the browser has taken the form data
+    setTimeout(function () {
+      form.reset();
+      input.setAttribute('aria-invalid', 'false');
+      btn.disabled = true;
+    }, 0);
+
+    showAlmostThere('Complete the verification in the window that just opened, then ');
+  });
 
   function isValid(input) { return EMAIL_RE.test(input.value.trim()); }
 
@@ -67,17 +100,23 @@
     if (!isValid(input)) return;
 
     btn.disabled = true;
-    // no-cors: the response is opaque, so we can only detect network failure
-    fetch(form.action, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
-      .then(function () {
-        showModal('Almost there!', 'Please check your inbox and confirm your subscription.');
+
+    function needsVerification() {
+      pending = { form: form, input: input, btn: btn };
+      showModal('One more step',
+        'To finish subscribing, please complete a quick verification.', true);
+      btn.disabled = false;
+    }
+
+    // No no-cors: we need to read the status to tell success from a held signup.
+    fetch(form.action, { method: 'POST', body: new FormData(form) })
+      .then(function (res) {
+        if (!res.ok) return needsVerification();
+        showAlmostThere();
         form.reset();
         input.setAttribute('aria-invalid', 'false');
       })
-      .catch(function () {
-        showModal('Something went wrong', 'Your subscription could not be sent. Please try again later.');
-        btn.disabled = false;
-      });
+      .catch(needsVerification);   // CORS or network hiccup: fall back to the normal flow
   });
 })();
 </script>
