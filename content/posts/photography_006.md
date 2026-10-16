@@ -17,10 +17,6 @@ images:
     title: "Title"
     thumb: "images/photography_006/02_thumbnail.jpg"
     
-  - image: "images/photography_006/03.jpg"
-    title: "Title"
-    thumb: "images/photography_006/03_thumbnail.jpg"
-    
   - image: "images/photography_006/04.jpg"
     title: "Title"
     thumb: "images/photography_006/04_thumbnail.jpg"
@@ -28,11 +24,7 @@ images:
   - image: "images/photography_006/05.jpg"
     title: "Title"
     thumb: "images/photography_006/05_thumbnail.jpg"
-    
-  - image: "images/photography_006/06.jpg"
-    title: "Title"
-    thumb: "images/photography_006/06_thumbnail.jpg"
-    
+   
   - image: "images/photography_006/07.jpg"
     title: "Title"
     thumb: "images/photography_006/07_thumbnail.jpg"
@@ -40,6 +32,19 @@ images:
   - image: "images/photography_006/08.jpg"
     title: "Title"
     thumb: "images/photography_006/08_thumbnail.jpg"
+    
+  - image: "images/photography_006/09.jpg"
+    title: "Title"
+    thumb: "images/photography_006/09_thumbnail.jpg"
+
+  - image: "images/photography_006/10.jpg"
+    title: "Title"
+    thumb: "images/photography_006/10_thumbnail.jpg"
+
+  - image: "images/photography_006/11.jpg"
+    title: "Title"
+    thumb: "images/photography_006/11_thumbnail.jpg"
+
 
 
 ---
@@ -58,3 +63,4 @@ The <a href="https://camera-wiki.org/wiki/Graflex_Series_B" target="_blank">Graf
  
 {{< img src="images/photography_006/04.jpg" alt="pile of" caption="Pile of" class="center-image" >}}
 
+<a href="#">Image gallery at the top</a>

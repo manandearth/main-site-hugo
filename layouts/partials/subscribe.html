@@ -1,11 +1,84 @@
 <div class="subscribe-frame">
-        <div class="subscribe-text">To subscribe to the newsletter, delivered to your mailbox monthly just like in the good old days, please enter your email below:</div>
-        <form
-            action="https://buttondown.com/api/emails/embed-subscribe/manandearth"
-            method="post"
-            class="embeddable-buttondown-form signup"
-        >
-            <input type="email" placeholder="Enter your email"name="email" id="bd-email" />
-            <input type="submit" value="Subscribe" />
-        </form>
+  <div class="subscribe-text">To subscribe to the newsletter, delivered to your mailbox monthly just like in the good old days, please enter your email below:</div>
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/manandearth"
+    method="post"
+    class="embeddable-buttondown-form signup subscribe-form"
+    novalidate
+  >
+    <input type="email" name="email" placeholder="Enter your email" aria-label="Email address" autocomplete="email" required />
+    <input type="submit" value="Subscribe" disabled />
+  </form>
 </div>
+
+{{ if not (.Page.Scratch.Get "subscribeAssets") }}
+{{ .Page.Scratch.Set "subscribeAssets" true }}
+
+<dialog id="subscribe-modal" class="subscribe-modal" aria-labelledby="subscribe-modal-title">
+  <h2 id="subscribe-modal-title"></h2>
+  <p id="subscribe-modal-body"></p>
+  <button type="button" class="subscribe-modal-close">Close</button>
+</dialog>
+
+<style>
+  .subscribe-form input[type="submit"]:disabled { opacity: .5; cursor: not-allowed; }
+  .subscribe-form input[type="email"][aria-invalid="true"] { outline: 2px solid #c0392b; }
+  .subscribe-modal { border: 1px solid #ccc; border-radius: 8px; padding: 1.5rem 2rem; max-width: 26rem; }
+  .subscribe-modal::backdrop { background: rgba(0,0,0,.5); }
+  .subscribe-modal h2 { margin-top: 0; }
+</style>
+
+<script>
+(function () {
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var modal = document.getElementById('subscribe-modal');
+  var title = document.getElementById('subscribe-modal-title');
+  var body  = document.getElementById('subscribe-modal-body');
+
+  function showModal(t, msg) {
+    title.textContent = t;
+    body.textContent = msg;
+    modal.showModal();
+  }
+
+  // Close via button, backdrop click (Esc works natively)
+  modal.querySelector('.subscribe-modal-close').addEventListener('click', function () { modal.close(); });
+  modal.addEventListener('click', function (e) { if (e.target === modal) modal.close(); });
+
+  function isValid(input) { return EMAIL_RE.test(input.value.trim()); }
+
+  // Enable/disable button as the user types (works for every form instance)
+  document.addEventListener('input', function (e) {
+    var input = e.target;
+    if (!input.matches('.subscribe-form input[type="email"]')) return;
+    var form = input.form;
+    var valid = isValid(input);
+    form.querySelector('input[type="submit"]').disabled = !valid;
+    input.setAttribute('aria-invalid', (!valid && input.value !== '') ? 'true' : 'false');
+  });
+
+  document.addEventListener('submit', function (e) {
+    var form = e.target;
+    if (!form.matches('.subscribe-form')) return;
+    e.preventDefault();
+
+    var input = form.querySelector('input[type="email"]');
+    var btn = form.querySelector('input[type="submit"]');
+    if (!isValid(input)) return;
+
+    btn.disabled = true;
+    // no-cors: the response is opaque, so we can only detect network failure
+    fetch(form.action, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
+      .then(function () {
+        showModal('Almost there!', 'Please check your inbox and confirm your subscription.');
+        form.reset();
+        input.setAttribute('aria-invalid', 'false');
+      })
+      .catch(function () {
+        showModal('Something went wrong', 'Your subscription could not be sent. Please try again later.');
+        btn.disabled = false;
+      });
+  });
+})();
+</script>
+{{ end }}
