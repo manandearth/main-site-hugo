@@ -52,7 +52,7 @@ pictures:
     button: "Details"
   
   - title: "Simancon"
-    content: "A photogrphy journey up the Sierra."
+    content: "A photography journey up the Sierra."
     thumb: "images/gallery/thumbs/simancon_01.jpg"
     button: "Details"
     link: "/posts/photography_002/"
