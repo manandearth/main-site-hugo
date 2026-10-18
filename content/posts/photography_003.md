@@ -1,5 +1,5 @@
 ---
-title: "Abejarruco"
+title: "Abejaruco"
 style: "style2 medium lightbox onscroll-fade-in"
 date: 2026-04-10T09:50:42+02:00
 tags: ["photography"]
@@ -70,11 +70,11 @@ images:
 
 ---
 
-<p><span class="dropcap">V</span>ery pleased with my new 55mm lens. Capturing less details, but more fits in. This is winter sun in this latitude. It has its harshness, nonetheless this is exactly what punctuates everything with high contrast.</p>
+<p><span class="dropcap">V</span>ery pleased with my new 55mm lens. Capturing less details, but more fits in. This is winter sun in this latitude. It is harsh, nonetheless this is exactly what punctuates everything with high contrast.</p>
 
 {{< img src="images/photography_003/03.jpg" alt="Path" caption="Path" class="center-image" >}}
 
-<p>The rain was long gone but the earth finds it difficult to drink it all just yet. Some of this humidity will have to be shared by evaporation. Like many country landscapes anywhere this nature appearing from the path is thin. The trees might be tall but they hide large fields which are the greater reality of the countryside. In those areas where the field meets the public path, thanks to low maintenence, and municipal priorities we get some overgrowth, and with it what once was the rule. 
+<p>The rain long gone, yet the earth finds it difficult to drink it all just yet. Some of this humidity will be shared by evaporation. Like many country landscapes anywhere, the nature viewed from the path is thin. The trees might be tall but they hide large fields, which are the greater reality of the countryside. In those areas where the field meets the public path, thanks to low maintenence and municipal priorities, we get some overgrowth, and with a glimpse into what once was the rule. 
 </p>
 
 {{< img src="images/photography_003/05.jpg" alt="More track" caption="More track" class="center-image" >}}
@@ -83,7 +83,7 @@ images:
 
 
 {{< img src="images/photography_003/06.jpg" alt="Tunnel" caption="Tunnel" class="center-image" >}}
-<p>Abejaruco is a name given to a hill, the Spanish name for Bee-eater, a colourful social bird. They are around from early spring and you hear them overhead. The last three photos in the gallery above were taken earlier with the 80mm lens, I thought they fitted here, and I also wanted those for comparison.</p>
+<p>Abejaruco is what this hill is called, the Spanish name for Bee-eater, <a href="https://seo.org/ave/abejaruco-europeo/" target="_blank">a colourful social bird</a>. They are around from early spring and I hear them overhead for months. The last three photos in the gallery above were taken earlier with the 80mm lens, I thought they fitted here, and I also wanted those for comparison.</p>
 
 {{< img src="images/photography_003/02.jpg" alt="Cows" caption="Cows" class="center-image" >}}
-
+<p><a href="#top">photo gallery at top</a></p>

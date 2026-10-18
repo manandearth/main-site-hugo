@@ -47,3 +47,5 @@ images:
 <p>My best photograph in my eyes by far, so far... is one I took using a multi film sheet holder, it is the <a href="https://www.graflex.org/speed-graphic/grafmatic/" target="_blank">Grafmatic</a>, it is ingenius, and allows firing 6 sheets, but... being almost a century old, mine does tend to get stuck. In this particular case the subject being a far away windmill at night, the meter demanded 8 seconds exposure, and the graflex capable of 1/10 of a second ( early days, I didn't think of just openning the shutter and use a lens cap to control the time ) meant I had to fire it 80 times, but after about 10 exposures I realise that every time that I wind the shutter between shots, I expose the film again, since I wasn't replacing the film cover..  well I decided to stop, and at that same moment the film holder got stuck. Later at home in a dark bag I managed to rescue that sheet, not without seriously scratching it.
 Art.</p>
 {{< img src="images/photography_001/vejer_night_color.jpg" alt="Vejer Night" caption="Scratchy night" class="center-image" >}}
+
+<p><a href="#top">photo gallery at top</a></p>
