@@ -76,16 +76,17 @@ images:
 ---
 
 
-<p><span class="dropcap">E</span>ver since veterinary laws were enforced, being since joining the EU, or since the government of one party or the other made keeping pigs condemnable, they are hidden. Pigs run so deep here, if they can't be kept legally, they will have to be kept illegally.
-I once wanted to create a surveying interactive map of livestock for this little village, a tool to keep stock.
+<p><span class="dropcap">E</span>ver since veterinary laws were enforced, being since joining the EU, or since the government of one party or the other made keeping pigs condemnable, they are hidden. Pigs run so deep here, if they can't be kept legally, they will have to be kept illegally.</p>
+
+<p>I once wanted to create a surveying interactive map of livestock for this little village, a tool to keep stock.
 every house has a concrete or stone made structure, usually three of four sections divided by walls and a tin roof for pigs. these days mostly I find one sow in each house, or a sow and her son or daughter being fattened up.
-In my map the pigs will last most of the year, and in the spring a few little ones will join for a short while, then distributed. The turkey population will also be seasonal, and steady, it is the chickens that are the most volatile. although some old hens are steadfast and last and as long as they lay they are safe. The soup made from an old hen is named `old rags`.</p>
+In my map the pigs will last most of the year, and in the spring a few little ones will join for a short while, then distributed. The turkey population will also be seasonal, and steady. It is the chickens that are the most volatile, although some old hens are steadfast and last, and as long as they lay, they are safe. The soup made from an old hen is named `old rags`.</p>
 {{< img src="images/photography_005/03.jpg" alt="Pinga" caption="Pinga" class="center-image" >}}
 
 {{< img src="images/photography_005/08.jpg" alt="vegetables" caption="Vegetables" class="center-image" >}}
 
 
-<p>They sent a message on the neighbours' group today, asking who's are the dead sheep, and can they do something about the stench. The sender wrote that they would have dealt with it if it was one or two.</p>
+<p>They sent a message on the neighbours' group today, asking who's are the dead sheep, and can they do something about the stench. The sender wrote that they would have dealt with it if there were only one or two.</p>
 
 {{< img src="images/photography_005/06.jpg" alt="pig" caption="Pig" class="center-image" >}}
 
