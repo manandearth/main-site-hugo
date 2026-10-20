@@ -11,8 +11,9 @@
 
     {{ range .Pages }}
       <article>
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-
+          <p><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a><span class="writing-format">{{ .Params.writingFormat }}</span></h2></p>
+        {{ if (in .Params.tags "words") }}
+        {{ end}}
         {{ if not (in .Params.tags "newsletter")  }}
         <h4>{{ (time .Params.date).Format "January 2, 2006" }}</h4>
         {{ end  }}

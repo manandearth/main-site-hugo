@@ -4,6 +4,7 @@ tags: ["words"]
 date: 2026-10-01T12:15:08+02:00
 style: "style2 medium lightbox onscroll-fade-in"
 draft: false
+writingFormat: "story"
 content: |
 inlineImage: "images/words_005/01.jpg"
 images:

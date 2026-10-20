@@ -1,6 +1,7 @@
 ---
 title: "News bias"
 tags: ["words"]
+writingFormat: "short essay"
 style: "style2 medium lightbox onscroll-fade-in"
 date: 2025-11-14
 content: |

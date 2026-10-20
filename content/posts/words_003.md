@@ -1,5 +1,6 @@
 ---
 title: "Retention"
+writingFormat: "notes"
 tags: ["words"]
 style: "style2 medium lightbox onscroll-fade-in"
 date: 2025-12-13

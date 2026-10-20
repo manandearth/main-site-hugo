@@ -1,6 +1,7 @@
 ---
 title: "Relevancy"
 tags: ["words"]
+writingFormat: "story"
 style: "style2 medium lightbox onscroll-fade-in"
 date: 2026-04-08
 draft: false
