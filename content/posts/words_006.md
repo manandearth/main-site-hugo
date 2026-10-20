@@ -8,10 +8,8 @@ writingFormat: "story"
 content: |
 inlineImage: "images/words_005/01.jpg"
 images:
-  - image: "images/words_005/01.jpg"
+  - image: "images/words_006/01_front_square.jpg"
     title: "Title"
-    thumb: "images/words_005/01.jpg"
-    button: "Details"
 ---
 <h2>1. Sleep</h2>
 <p><span class="dropcap">H</span>e used to call him Matsli'ah, not a common name, it was his family name and a rather strange one to be honest, in hebrew it means succesful. Never have I met another Matsli'ah before or after this one. In later years he called him by his first name: Itsik.

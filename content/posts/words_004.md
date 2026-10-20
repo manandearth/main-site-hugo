@@ -7,6 +7,10 @@ date: 2026-04-08
 draft: false
 content: |
 inlineImage: "images/issue_003/01.jpg"
+images:
+ - image: "images/words_004/03.jpg"
+   title: "Title"
+
 ---
 
 <p><span class="dropcap">H</span>is name on the screen; the phone on silent mode. It occurs quite often when the phone is on silent: he calls, and I happen to look at the screen and see his name. Curiously, his profile picture is a computer-generated image of two beings embracing, a blue icy male figure and a fiery woman figure. A passion contrasting the word 'Dad' above the image. I click to answer and say "hello dad", his voice more wakeful than I expected, "Hi, listen, I don't know where I am exactly. It is dark here, must be underground... I hear water running. I know it is a hospital, must be the cellar". "is there no one to ask?" I asked, "no" he answered.</p>

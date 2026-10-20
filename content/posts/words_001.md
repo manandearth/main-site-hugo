@@ -7,25 +7,8 @@ date: 2025-10-09
 content: |
 inlineImage: "images/words_001/01.jpg"
 images:
-  - image: "images/words_001/01.jpg"
+  - image: "images/words_001/01_front.jpg"
     title: "Title"
-    thumb: "images/words_001/01.jpg"
-    button: "Details"
-
-  - image: "images/words_001/02.jpg"
-    title: "Title"
-    thumb: "images/words_001/02.jpg"
-    button: "Details"
-    
-  - image: "images/words_001/03.jpg"
-    title: "Title"
-    thumb: "images/words_001/03.jpg"
-    button: "Details"
-
-  - image: "images/words_001/04.jpg"
-    title: "Title"
-    thumb: "images/words_001/04.jpg"
-    button: "Details"
 ---
 <p><span class="dropcap">I</span>s this the point where a socialist turned into an anarchist? Did this just happen? I never gave it much thought really. I guess that I thought Anarchy is just utopian, like all its critics do, thinking it is probably not going to work, which is besides the point, as no other system has proven to work, certainly not the current one.
 I'll start at that moment, or the moment just before: I was running up a hill. A hill that I run almost daily. It is not an easy climb, but I am used to it, and my mind busily wanders and then.. I am at the top before I know it.

@@ -7,6 +7,9 @@ date: 2025-12-13
 draft: false
 content: |
 inlineImage: "images/issue_003/01.jpg"
+images:
+  - image: "images/words_003/03_squared.jpg"
+    title: "Title"
 ---
 <p><span class="dropcap">I</span> didn't think I'll end up speaking about myself. I wanted to speak out my mind, and to find connections between the things I do, but consciously or even deliberately speaking about myself has no value, unless it helps relating to others, or communicate to others something beneficial. uff... language, a tool and a barrier.</p> 
 <p>That is actually what gives the name and the tone to this post. I've been studying French, mostly alone. mostly with books. I started by spending the first 15 minutes of the day with the old and tested method of Assimil. The idea is to keep going, and as long as one goes, and as long as one is not challenged otherwise, the going is good.</p>

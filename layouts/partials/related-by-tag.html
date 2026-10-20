@@ -1,0 +1,36 @@
+{{ $page := . }}
+{{ range .Params.tags }}
+  {{ $tag := . }}
+  {{ $related := where $page.Site.RegularPages "Params.tags" "intersect" (slice $tag) }}
+  {{ $related = where $related "Permalink" "ne" $page.Permalink }}
+  {{ $related = first 6 $related.ByDate.Reverse }}
+
+  {{ if $related }}
+  <section id="more-{{ $tag | urlize }}" class="wrapper style2">
+      <div class="inner">
+          <h2>More {{ $tag }}</h2>
+      </div>
+
+      <div class="gallery style2">
+              {{ range $related }}
+    {{ $post := . }}
+    {{ with $post.Params.images }}
+        {{ $img := index . 0 }}
+        {{ $text := ($post.Params.content | default $post.Plain) | plainify }}
+        {{ $words := findRE `\S+` $text }}
+        {{ $excerpt := delimit (first 10 $words) " " }}
+        {{ if gt (len $words) 10 }}{{ $excerpt = print $excerpt "…" }}{{ end }}
+        {{ partial "picture" (dict
+            "title"   $post.Title
+            "content" $excerpt
+            "image"   ($img.image | absURL)
+            "thumb"   (($img.thumb | default $img.image) | absURL)
+            "link"    $post.RelPermalink
+            "button"  ($img.button | default "Read")
+        ) }}
+    {{ end }}
+{{ end }}
+      </div>
+  </section>
+  {{ end }}
+{{ end }}

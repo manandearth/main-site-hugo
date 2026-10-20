@@ -6,6 +6,10 @@ style: "style2 medium lightbox onscroll-fade-in"
 date: 2025-11-14
 content: |
 inlineImage: "images/issue_003/01.jpg"
+images:
+ - image: "images/words_002/01.jpg"
+   title: "Title"
+
 ---
 <p><span class="dropcap">S</span>ometimes I find that I give advice that I didn't know I had. It happened yesterday. My daughter said she is overwhelmed by the news, that she is reading too much, and that it affects her badly. I said that she should be critical about what she reads: What is real news: something that happened, and what is just some sensationalist piece of distraction: something that someone wants you to hear, or wants someone to hear. Noise. Some of the problems with populism is that it is insincere, it is loud, and it doesn't care about truths. It is there to win, and no price is too high.
 

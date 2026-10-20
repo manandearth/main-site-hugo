@@ -8,10 +8,8 @@ draft: false
 content: |
 inlineImage: "images/words_005/01.jpg"
 images:
-  - image: "images/words_005/01.jpg"
+  - image: "images/words_005/01_front.jpg"
     title: "Title"
-    thumb: "images/words_005/01.jpg"
-    button: "Details"
 ---
 <p><span class="dropcap">E</span>very once in a while we change the orientation of the living room table. It's a busy table; to move it on its axis by 90 degrees requires some tidying and sorting first. Some of the objects that are on the table might be totally out of place when reoriented. When I spot them I put them aside to avoid the breach.A lot depends on the success of the operation, if we get it right a new space will be gained, a new era will have begun. 
 So yes, I had enough, something had to be done and to take a real shape, so that it could not be denied. And now all hopes are up, and I have accomplices too; I find it easy to get family members implicated. I am not sure if that is a general rule for families but they do tend to jump into things with me. Perhaps I am very convincing, or too sure of myself, or really bad at expressing my doubts.
