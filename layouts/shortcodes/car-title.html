@@ -1,0 +1,8 @@
+<div class="car-title" data-car>
+  <h2>{{ .Inner }}</h2>
+  <img class="car-title__car" src="{{ .Get "src" }}" alt="" aria-hidden="true">
+</div>
+{{ if not (.Page.Scratch.Get "car-title-js") }}
+  <script src="/js/car-title.js" defer></script>
+  {{ .Page.Scratch.Set "car-title-js" true }}
+{{ end }}

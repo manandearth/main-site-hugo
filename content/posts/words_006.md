@@ -25,8 +25,7 @@ More than forty years later my dad told me that Matsli'ah died, yet I am left wi
 Meanwhile every mention of sleeping at the wheel brought me back to this original picture that was formed in my six years old brain. I wonder whether in the first time that I felt drowsy while driving, not having that warning picture, I could have nodded off and out of this world. 
 </p>
 
-
-<h2>2. Lark</h2>
+{{< car-title src="/images/words_006/lark.png" >}}2. Lark{{< /car-title >}}
 <p><span class="dropcap">M</span>y dad had a fascination with old American cars, heavy and long and styled. I remember a couple of those. He held on to them through breakages, custom solutions where replacement parts couldn't be attained, and finally drove them to the ground. I don't remember the first car he owned in my lifetime, but as it kept being mentioned, it formed a mythical psuedo memory, like the batmobile. It was a 1960s Studebaker Lark, painted black. It had a former life as a taxi, and the only semi real memory I have is of great spaciousness on the back seat, no seatbelts ( it was the 1970s ), and me and my brother sliding from side to side on the smooth black leather.
 
 The story that I was repeatedly told about the car crowns my memory with a twist, it was our job to hold on to the doors on the turns as they'd fling open if not held.
