@@ -1,0 +1,138 @@
+<div class="subscribe-frame">
+  <div class="subscribe-text">To subscribe to the newsletter:</div>
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/manandearth"
+    method="post"
+    class="embeddable-buttondown-form signup subscribe-form"
+    novalidate
+  >
+    <input type="email" name="email" placeholder="Enter your email" aria-label="Email address" autocomplete="email" required />
+    <input type="submit" value="Subscribe" disabled />
+  </form>
+</div>
+
+{{ if not (.Page.Scratch.Get "subscribeAssets") }}
+{{ .Page.Scratch.Set "subscribeAssets" true }}
+
+<dialog id="subscribe-modal" class="subscribe-modal" aria-labelledby="subscribe-modal-title">
+  <h2 id="subscribe-modal-title"></h2>
+  <p id="subscribe-modal-body"></p>
+  <button type="button" id="subscribe-modal-verify" hidden>Verify and subscribe</button>
+  <button type="button" class="subscribe-modal-close">Close</button>
+</dialog>
+
+<style>
+  .subscribe-form input[type="submit"]:disabled { opacity: .5; cursor: not-allowed; }
+  .subscribe-form input[type="email"][aria-invalid="true"] { outline: 2px solid #c0392b; }
+  .subscribe-modal { border: 1px solid #ccc; border-radius: 8px; padding: 1.5rem 2rem; max-width: 26rem; }
+  .subscribe-modal::backdrop { background: rgba(0,0,0,.5); }
+  .subscribe-modal h2 { margin-top: 0; }
+  .subscribe-modal [hidden] { display: none !important; }
+</style>
+
+<script>
+(function () {
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var modal = document.getElementById('subscribe-modal');
+  var title = document.getElementById('subscribe-modal-title');
+  var body  = document.getElementById('subscribe-modal-body');
+  var verifyBtn = document.getElementById('subscribe-modal-verify');
+  var pending = null; // { form, input, btn } while a verification is waiting
+
+  function showModal(t, msg, needsVerify) {
+    title.textContent = t;
+    body.textContent = msg;
+    verifyBtn.hidden = !needsVerify;
+    verifyBtn.style.display = needsVerify ? '' : 'none';
+    modal.showModal();
+  }
+
+  function showAlmostThere(extra) {
+    showModal('Almost there!',
+      (extra || '') + 'Please check your inbox and confirm your subscription.', false);
+  }
+
+  // Close via button, backdrop click (Esc works natively)
+  modal.querySelector('.subscribe-modal-close').addEventListener('click', function () { modal.close(); });
+  modal.addEventListener('click', function (e) { if (e.target === modal) modal.close(); });
+
+  // Buttondown held the signup behind a Turnstile challenge: submit the form
+  // natively into a new tab so the person sees and completes it, and
+  // meanwhile show the same "Almost there" message as a normal signup.
+  // Done from a click handler so popup blockers allow it.
+  verifyBtn.addEventListener('click', function () {
+    if (!pending) return;
+    var form = pending.form, input = pending.input, btn = pending.btn;
+    pending = null;
+
+    form.target = '_blank';
+    form.submit();                 // native submit() does not re-trigger the submit listener
+    form.target = '';
+
+    // reset after the browser has taken the form data
+    setTimeout(function () {
+      form.reset();
+      input.setAttribute('aria-invalid', 'false');
+      btn.disabled = true;
+    }, 0);
+
+    showAlmostThere('Complete the verification in the tab that just opened, then ');
+  });
+
+  function isValid(input) { return EMAIL_RE.test(input.value.trim()); }
+
+  // Enable/disable button as the user types (works for every form instance)
+  document.addEventListener('input', function (e) {
+    var input = e.target;
+    if (!input.matches('.subscribe-form input[type="email"]')) return;
+    var form = input.form;
+    var valid = isValid(input);
+    form.querySelector('input[type="submit"]').disabled = !valid;
+    input.setAttribute('aria-invalid', (!valid && input.value !== '') ? 'true' : 'false');
+  });
+
+  document.addEventListener('submit', function (e) {
+    var form = e.target;
+    if (!form.matches('.subscribe-form')) return;
+    e.preventDefault();
+
+    var input = form.querySelector('input[type="email"]');
+    var btn = form.querySelector('input[type="submit"]');
+    if (!isValid(input)) return;
+
+    btn.disabled = true;
+
+    function needsVerification() {
+      pending = { form: form, input: input, btn: btn };
+      showModal('One more step',
+        'To finish subscribing, please complete a quick verification.', true);
+      btn.disabled = false;
+    }
+
+    function succeeded() {
+      showAlmostThere();
+      form.reset();
+      input.setAttribute('aria-invalid', 'false');
+    }
+
+    // Normal signups answer with a 302 redirect, which the browser may refuse to
+    // let us read cross-origin. Only the held-for-verification case (a readable
+    // 400) needs the extra step; everything else is treated as accepted.
+    fetch(form.action, { method: 'POST', body: new FormData(form), redirect: 'manual' })
+      .then(function (res) {
+        if (res.type === 'opaqueredirect' || res.ok) return succeeded();
+        if (res.status === 400) return needsVerification();
+        throw new Error('unexpected status ' + res.status);
+      })
+      .catch(function () {
+        // No readable response: most likely the redirect was blocked by CORS (a
+        // successful signup). A genuine network failure is told apart by being offline.
+        if (navigator.onLine) return succeeded();
+        showModal('Something went wrong',
+          'Your subscription could not be sent. Please try again later.', false);
+        btn.disabled = false;
+      });
+  });
+})();
+</script>
+{{ end }}
