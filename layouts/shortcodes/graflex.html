@@ -1,0 +1,8 @@
+<div class="graflex" data-graflex>
+  {{ .Inner }}
+  <img class="graflex__img" src="{{ .Get "src" }}" alt="" aria-hidden="true">
+</div>
+{{ if not (.Page.Scratch.Get "graflex-js") }}
+  <script src="/js/graflex.js" defer></script>
+  {{ .Page.Scratch.Set "graflex-js" true }}
+{{ end }}
