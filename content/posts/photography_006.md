@@ -5,7 +5,7 @@ date: 2026-10-09T19:47:22+02:00
 draft: false
 layout: "gallery"
 tags: ["photography"]
-title: "Roadkill and tipping"
+title: "Roadkill and fly-tipping"
 content: |
 inlineImage: "images/photography_006/color_inner.jpg"
 images:
