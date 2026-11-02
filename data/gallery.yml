@@ -3,6 +3,12 @@ style: "style2 medium lightbox onscroll-fade-in"
 content: |
         <p>Click on the images for related posts</p>
 pictures:
+  - title: "A Solitary Tabacco Plant"
+    content: "street plant"
+    thumb: "images/photography_007/01_front.jpg"
+    button: "Details"
+    link: "/posts/photography_007/"
+
   - title: "Fountain transformation"
     content: "done with ballpoint (for now)"
     thumb: "images/penart_004/front_thumbnail.jpg"
