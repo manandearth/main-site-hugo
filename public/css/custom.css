@@ -181,3 +181,31 @@ input[type="submit"] {
 #gallery-post > div.gallery.style2.small.lightbox.onscroll-fade-in > div.inner > article {
     width: auto;
 }
+
+.fader {
+  position: relative;
+  aspect-ratio: 16 / 21;
+  max-width: 900px;
+  margin-bottom: 2rem;
+}
+
+.fader figure img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fade 12s infinite;
+}
+
+.fader figure:nth-child(2) img { animation-delay: 4s; }
+.fader figure:nth-child(3) img { animation-delay: 8s; }
+
+@keyframes fade {
+  0%        { opacity: 0; }
+  8%        { opacity: 1; }   /* fade in */
+  33%       { opacity: 1; }   /* hold */
+  41%       { opacity: 0; }   /* fade out */
+  100%      { opacity: 0; }
+}

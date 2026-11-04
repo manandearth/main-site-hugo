@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="margin: 0; padding: 0; border: 0; font: inherit; vertical-align: baseline; box-sizing: border-box; scroll-behavior: smooth; font-size: 1rem;">
+<html style="margin: 0; padding: 0; border: 0; font: inherit; vertical-align: baseline; box-sizing: border-box; scroll-behavior: smooth; overflow-x: clip; font-size: 1rem;">
 <head>
 <meta charset="utf-8">
 <style>
@@ -3042,6 +3042,11 @@ ul.actions:not(.fixed) li .button.icon:before {
     display: none;
   }
 }
+@media (pointer: coarse) {
+  .gallery.style2 article.is-centered .caption {
+    opacity: 1 !important;
+  }
+}
 .nav-links a:hover {
   color: #000;
 }
@@ -3133,9 +3138,30 @@ a:hover {
     font-size: 1rem;
   }
 }
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 1;
+  }
+
+  41% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
 </style>
 </head>
-<body style="box-sizing: inherit; margin: 0; padding: 0; border: 0; font: inherit; vertical-align: baseline; -webkit-text-size-adjust: none; -ms-overflow-style: scrollbar; background: #fff; background-color: #fff; color: #000; font-family: 'IBM Plex Mono', monospace; font-size: 1.5rem; font-weight: 200; line-height: 1.85;">
+<body style="box-sizing: inherit; margin: 0; padding: 0; border: 0; font: inherit; vertical-align: baseline; -webkit-text-size-adjust: none; -ms-overflow-style: scrollbar; background: #fff; background-color: #fff; color: #000; overflow-x: clip; font-family: 'IBM Plex Mono', monospace; font-size: 1.5rem; font-weight: 200; line-height: 1.85;">
 <div style="box-sizing: inherit; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; max-width: 788px; margin: 0 auto; background: #ffffff; padding: 24px;">
 <article style="box-sizing: inherit; margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; display: block;">
 <h1 style="box-sizing: inherit; padding: 0; border: 0; font: inherit; vertical-align: baseline; font-weight: 400; letter-spacing: 0; margin: 0 0 1rem 0; color: inherit; text-decoration: none; font-size: 3.5rem; line-height: 1.2;">manandearth, October 2026</h1>
@@ -3153,8 +3179,8 @@ My son, Noah, find my interest in old cameras funny. The number of measurements 
   
 </figure>
 
-<p style="box-sizing: inherit; padding: 0; border: 0; font: inherit; vertical-align: baseline; font-family: 'IBM Plex Mono', monospace; margin: 0 0 2rem 0; font-size: 1rem; font-weight: 100;">That same afternoon I went out with my camera and came across a dead bird on the road with its wing flapping in the wind, it was on a busy road and was just a perfect illustration. I placed the camera low and took a pleasing shot of the bird in the forground and a speeding car in the background. This being the first photo in the roll, and due to some miscalculation on my part ended up exposed on the marginal part and registered in memory and not in silver bromide. Another friend, Caco, told me he thought about me when he saw a Gennet killed, "What you need to do is to cycle, roadkill is on roads", he said, but I am no road cyclist, I am a hiker and I walk on turmac only if there is no other choice, and so I had to lower a gear on this project and have another one going in parallel: Tipping.</p>
-<p style="box-sizing: inherit; padding: 0; border: 0; font: inherit; vertical-align: baseline; font-family: 'IBM Plex Mono', monospace; margin: 0 0 2rem 0; font-size: 1rem; font-weight: 100;"><a href="https://www.adamgefen.com/posts/photography_006/" target="_blank_" style="box-sizing: inherit; margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; -moz-transition: color .2s ease-in-out; -webkit-transition: color .2s ease-in-out; -ms-transition: color .2s ease-in-out; color: #000; transition: color 0.2s ease-in-out; text-decoration: underline;">It is not easy to take a good photo of a pile of rubbish</a>. It is a common practice to tip and the result is a kind of an imprint or a portrait of the individual tipper. On that same roll of film that failed to register the dead bird, the last photo was of a can of redbull and a flattened cigarette butt on a side road that I came across, those were placed perfectly and I thought "wow, this is a portrait really!"", well, luck had it and this photo being the last one in the wrongly wound roll.. it was cropped out.</p>
+<p style="box-sizing: inherit; padding: 0; border: 0; font: inherit; vertical-align: baseline; font-family: 'IBM Plex Mono', monospace; margin: 0 0 2rem 0; font-size: 1rem; font-weight: 100;">That same afternoon I went out with my camera and came across a dead bird on the road with its wing flapping in the wind, it was on a busy road and was just a perfect illustration. I placed the camera low and took a pleasing shot of the bird in the forground and a speeding car in the background. This being the first photo in the roll, and due to some miscalculation on my part ended up exposed on the marginal part and registered in memory and not in silver bromide. Another friend, Caco, told me he thought about me when he saw a Gennet killed, "What you need to do is to cycle, roadkill is on roads", he said, but I am no road cyclist, I am a hiker and I walk on turmac only if there is no other choice, and so I had to lower a gear on this project and have another one going in parallel: Fly-tipping.(The British term for dumping rubbish, not giving tips)</p>
+<p style="box-sizing: inherit; padding: 0; border: 0; font: inherit; vertical-align: baseline; font-family: 'IBM Plex Mono', monospace; margin: 0 0 2rem 0; font-size: 1rem; font-weight: 100;"><a href="https://www.adamgefen.com/posts/photography_006/" target="_blank_" style="box-sizing: inherit; margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; -moz-transition: color .2s ease-in-out; -webkit-transition: color .2s ease-in-out; -ms-transition: color .2s ease-in-out; color: #000; transition: color 0.2s ease-in-out; text-decoration: underline;">It is not easy to take a good photo of a pile of rubbish</a>. Fly-tipping is common, and the result is a kind of an imprint or a portrait of the individual fly-tipper. On that same roll of film that failed to register the dead bird, the last photo was of a can of redbull and a flattened cigarette butt on a side road that I came across, those were placed perfectly and I thought "wow, this is a portrait really!"", well, luck had it and this photo being the last one in the wrongly wound roll.. it was cropped out.</p>
 <figure class="center-image" style="box-sizing: inherit; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; display: block; margin: 2rem 0; text-align: center; justify-self: center;">
   <img src="../../images/newsletter_001/06.jpg" alt="burl" style="box-sizing: inherit; margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; border-radius: 4px; max-width: 100%; height: auto;" height="auto">
   

@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+
+<html>
+	
+	<head>
+	<title>Adam Gefen</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">	
+    <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+    <link rel="manifest" href="../../site.webmanifest">
+    <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+	
+	
+	
+	
+	
+	<link rel="stylesheet" href="../../css/main.min.css">
+	
+	
+	
+	<noscript><link rel="stylesheet" href="../../css/noscript.min.css" /></noscript>
+	
+
+	
+	<link rel="stylesheet" href="../../css/fontawesome-all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/custom.css">
+
+</head>
+
+
+	<body class="is-preload">
+
+		
+		<div id="wrapper" class="divided">
+
+  <header class="site-header">
+  <nav class="nav">
+    <a href="../../" class="nav-logo">Adam Gefen</a>
+
+
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="../../tags/photography">Photography</a></li>
+      <li><a href="../../tags/words/">Writing</a></li>
+      <li><a href="../../tags/penart/">Pen-art</a></li>
+      <li><a href="../../tags/newsletter/">Newsletter</a></li>
+    </ul>
+  </nav>
+</header>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const toggle = document.querySelector(".nav-toggle");
+  const links = document.querySelector(".nav-links");
+  toggle.addEventListener("click", () => {
+    links.classList.toggle("open");
+  });
+});
+</script>
+
+  
+  
+    <section id="words-post" class="wrapper style2">
+  <div class="inner">
+    <div class="post-title">manandearth, November 2026</div>
+  </div>
+  <div>
+    
+    </div>
+  </div>
+</section>
+<div class="gallery-post-content">
+<p>
+<span class="dropcap">I</span> am reluctant to use buzzwords, and sometimes I struggle to substitute them: the specifics of the virtual spaces in which people hang out over the internet (this app or that), fashionable and contentious habits in relation to technology(from brainrot to doomscroll), the division of society, politically or otherwise(from woke to tradwife), all the above escapes my text. Even 'space' or 'community' are contaminated terms. I feel that people are trapped in a language that is limited and that it influences reality and continuously deepening the one path that we are on.</p>
+<p> This link is to an attempt to write something timeless: <a href="https://www.adamgefen.com/posts/words_007/" target="_blank">The Time Tunnel: a flash story </a>.
+</p>
+<div class="subscribe-frame">
+  <div class="subscribe-text">To subscribe to the newsletter, delivered to your mailbox monthly just like in the good old days, please enter your email below:</div>
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/manandearth"
+    method="post"
+    class="embeddable-buttondown-form signup subscribe-form"
+    novalidate
+  >
+    <input type="email" name="email" placeholder="Enter your email" aria-label="Email address" autocomplete="email" required />
+    <input type="submit" value="Subscribe" disabled />
+  </form>
+</div>
+
+
+
+
+<dialog id="subscribe-modal" class="subscribe-modal" aria-labelledby="subscribe-modal-title">
+  <h2 id="subscribe-modal-title"></h2>
+  <p id="subscribe-modal-body"></p>
+  <button type="button" id="subscribe-modal-verify" hidden>Verify and subscribe</button>
+  <button type="button" class="subscribe-modal-close">Close</button>
+</dialog>
+
+<style>
+  .subscribe-form input[type="submit"]:disabled { opacity: .5; cursor: not-allowed; }
+  .subscribe-form input[type="email"][aria-invalid="true"] { outline: 2px solid #c0392b; }
+  .subscribe-modal { border: 1px solid #ccc; border-radius: 8px; padding: 1.5rem 2rem; max-width: 26rem; }
+  .subscribe-modal::backdrop { background: rgba(0,0,0,.5); }
+  .subscribe-modal h2 { margin-top: 0; }
+  .subscribe-modal [hidden] { display: none !important; }
+</style>
+
+<script>
+(function () {
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var modal = document.getElementById('subscribe-modal');
+  var title = document.getElementById('subscribe-modal-title');
+  var body  = document.getElementById('subscribe-modal-body');
+  var verifyBtn = document.getElementById('subscribe-modal-verify');
+  var pending = null; 
+
+  function showModal(t, msg, needsVerify) {
+    title.textContent = t;
+    body.textContent = msg;
+    verifyBtn.hidden = !needsVerify;
+    verifyBtn.style.display = needsVerify ? '' : 'none';
+    modal.showModal();
+  }
+
+  function showAlmostThere(extra) {
+    showModal('Almost there!',
+      (extra || '') + 'Please check your inbox and confirm your subscription.', false);
+  }
+
+  
+  modal.querySelector('.subscribe-modal-close').addEventListener('click', function () { modal.close(); });
+  modal.addEventListener('click', function (e) { if (e.target === modal) modal.close(); });
+
+  
+  
+  
+  
+  verifyBtn.addEventListener('click', function () {
+    if (!pending) return;
+    var form = pending.form, input = pending.input, btn = pending.btn;
+    pending = null;
+
+    form.target = '_blank';
+    form.submit();                 
+    form.target = '';
+
+    
+    setTimeout(function () {
+      form.reset();
+      input.setAttribute('aria-invalid', 'false');
+      btn.disabled = true;
+    }, 0);
+
+    showAlmostThere('Complete the verification in the tab that just opened, then ');
+  });
+
+  function isValid(input) { return EMAIL_RE.test(input.value.trim()); }
+
+  
+  document.addEventListener('input', function (e) {
+    var input = e.target;
+    if (!input.matches('.subscribe-form input[type="email"]')) return;
+    var form = input.form;
+    var valid = isValid(input);
+    form.querySelector('input[type="submit"]').disabled = !valid;
+    input.setAttribute('aria-invalid', (!valid && input.value !== '') ? 'true' : 'false');
+  });
+
+  document.addEventListener('submit', function (e) {
+    var form = e.target;
+    if (!form.matches('.subscribe-form')) return;
+    e.preventDefault();
+
+    var input = form.querySelector('input[type="email"]');
+    var btn = form.querySelector('input[type="submit"]');
+    if (!isValid(input)) return;
+
+    btn.disabled = true;
+
+    function needsVerification() {
+      pending = { form: form, input: input, btn: btn };
+      showModal('One more step',
+        'To finish subscribing, please complete a quick verification.', true);
+      btn.disabled = false;
+    }
+
+    function succeeded() {
+      showAlmostThere();
+      form.reset();
+      input.setAttribute('aria-invalid', 'false');
+    }
+
+    
+    
+    
+    fetch(form.action, { method: 'POST', body: new FormData(form), redirect: 'manual' })
+      .then(function (res) {
+        if (res.type === 'opaqueredirect' || res.ok) return succeeded();
+        if (res.status === 400) return needsVerification();
+        throw new Error('unexpected status ' + res.status);
+      })
+      .catch(function () {
+        
+        
+        if (navigator.onLine) return succeeded();
+        showModal('Something went wrong',
+          'Your subscription could not be sent. Please try again later.', false);
+        btn.disabled = false;
+      });
+  });
+})();
+</script>
+
+
+
+<h3>a professional career</h3>
+<p>
+At 45 I started writing code professionally; It was my third career. Seven years in, instead of a predictable terrain, I navigate in the same misty cold air, boulders a plenty; when I manage to make out a path, it is a climb and a hard one, and when I don't, I move between the scattered rocks not knowing which way is forward.
+</p>
+<p>
+In the summer of 2012, in what feels like a parallel universe (career number 2), I went on a short tour of the province, meeting local guitar makers. The result was "La Asociación de Lutieres de Cádiz", which we inaugurated in the small classroom of an old school. It was winter by then, and my neighbour Beatriz prepared a pumpkin stew for the guests. After the event one of the most enthusiastic members said he will not join as some of the attendants were not professional guitar makers, fair enough. Amateurism was in the heart of my approach. I was an amateur myself; I could only shrug.
+</p>
+<p>
+The favourite bits of software of mine are written in technologies I don't command; my favourite photos I took by mistake; the best prints are scratched and dusty and can't be put for sale.
+</p>
+<p>
+This is my friend Chris. The exposure in the shot was terrible, A professional technician would have told me that the film holder is leaking light and where exactly the fault is ( I know this because a professional technician did tell me just that... ) I placed three prints in sequence so the viewer can mentally create an averaged image in their mind:
+</p>
+<div class="fader">
+  <figure class="center-image">
+    <img src="../../images/newsletter_002/Chris_01.jpg" alt="Chris_01">
+    
+  </figure>
+
+  <figure class="center-image">
+    <img src="../../images/newsletter_002/Chris_02.jpg" alt="Chris_02">
+    
+  </figure>
+
+  <figure class="center-image">
+    <img src="../../images/newsletter_002/Chris_03.jpg" alt="Chris_03">
+    
+  </figure>
+
+</div>
+<p>
+A new science/fiction/art project we started (Sophie and I) is about plants stories, it has been brewing for a while and the shape is unclear, but thankfully art does not care about that, and we hope to get the first fanzine in a series printed in Risograph before Christmas. Let me know if you are interested in a copy. (reply to this newsletter or find the email at the footer in the website)
+It will be about plants and people, plants that have a story. <a href="https://www.adamgefen.com/posts/photography_007/" target="_blank">Here is a gallery of photos of (and some thoughts about ) a tobacco plant that shot out in all its glory outside a house in the village.</a>
+We crossed a neighbouring family on their afternoon walk, we all stopped by the plant, admiring its size. They said it shot up in a different spot in the village every year. I need to gather some testimonies.
+</p>
+<p>The Links in the page will open the relevant pages that complement this newsletter in a separate tab</p> 
+
+</div>
+
+  
+<link rel="stylesheet" href="../../css/posts.css">
+<link rel="stylesheet" href="../../css/header.css">
+  
+<footer class="wrapper style1 align-center">
+    <div class="inner">
+        <ul class="icons">
+            <li><a target="_blank" href="https://github.com/manandearth/" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
+            <li><a target="_blank" href="mailto:adamgefen@posteo.net" class="fav icon style2 fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <p> &copy; 2025-2026 <a target="_blank" href="https://github.com/manandearth/">Adam Gefen</a>
+            </p>
+</div>
+</footer>
+
+
+
+
+  
+		
+		</div>
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+<script src='../../js/bundle.min.js'></script>
+
+
+
+	</body>
+</html>

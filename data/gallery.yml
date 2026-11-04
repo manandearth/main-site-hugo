@@ -3,7 +3,7 @@ style: "style2 medium lightbox onscroll-fade-in"
 content: |
         <p>Click on the images for related posts</p>
 pictures:
-  - title: "A Solitary Tabacco Plant"
+  - title: "A Solitary Tobacco Plant"
     content: "street plant"
     thumb: "images/photography_007/01_front.jpg"
     button: "Details"
